@@ -262,6 +262,7 @@ class Names {
 		'km' => 'ភាសាខ្មែរ', # Khmer, Central
 		'kn' => 'ಕನ್ನಡ', # Kannada
 		'ko' => '한국어', # Korean
+		'ko-kore' => '韓國語', # Korean
 		'ko-kp' => '조선말', # Korean (DPRK), T190324
 		'koi' => 'перем коми', # Komi-Permyak
 		'kr' => 'kanuri', # Kanuri
