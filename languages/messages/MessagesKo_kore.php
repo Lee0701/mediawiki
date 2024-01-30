@@ -412,6 +412,6 @@ $digitTransformTable = [
 ];
 
 $separatorTransformTable = [
-	'.' => '點',
-	',' => '',
+	'.' => '．',
+	',' => '，',
 ];
