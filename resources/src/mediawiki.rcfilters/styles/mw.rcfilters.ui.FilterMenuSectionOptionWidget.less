@@ -4,11 +4,11 @@
 
 .mw-rcfilters-ui-filterMenuSectionOptionWidget {
 	background-color: @colorGray14;
-	padding-top: 0;
-	padding-bottom: 0;
+	padding-block-start: 0;
+	padding-block-end: 0;
 
 	&-header {
-		height: 2.5em;
+		block-size: 2.5em;
 		display: flex;
 		align-items: center;
 	}
@@ -18,7 +18,7 @@
 	}
 
 	&-whatsThisButton {
-		margin-left: 1.5em;
+		margin-inline-start: 1.5em;
 
 		&.oo-ui-buttonElement > .oo-ui-buttonElement-button {
 			font-weight: normal;
@@ -28,7 +28,7 @@
 			padding: 1em;
 
 			&-header {
-				margin-bottom: 1em;
+				margin-block-end: 1em;
 				font-weight: bold;
 			}
 
@@ -37,7 +37,7 @@
 			}
 
 			.oo-ui-buttonElement-frameless.oo-ui-labelElement > .oo-ui-buttonElement-button > .oo-ui-labelElement-label {
-				margin-left: 0;
+				margin-inline-start: 0;
 			}
 		}
 	}

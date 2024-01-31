@@ -11,5 +11,5 @@ span.mw-changeslist-line-prefix {
 }
 /* This can be either a span or a table cell */
 .mw-changeslist-line-prefix {
-	width: 1.25em;
+	inline-size: 1.25em;
 }

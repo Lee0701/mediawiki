@@ -1,7 +1,7 @@
 @import 'mediawiki.ui/variables.less';
 
 .mw-rcfilters-ui-savedLinksListItemWidget {
-	line-height: normal;
+	line-block-size: normal;
 
 	&,
 	&.oo-ui-iconElement {
@@ -23,12 +23,12 @@
 		// then the icon needs to be slightly smaller as well, so that
 		// when we toggle 'default' the icon doesn't bounce the option
 		// height up a little
-		width: 1.2em;
-		height: 1.2em;
-		min-width: 16px;
-		min-height: 16px;
+		inline-size: 1.2em;
+		block-size: 1.2em;
+		min-inline-size: 16px;
+		min-block-size: 16px;
 		opacity: 0.5;
-		left: 0;
+		inset-inline-start: 0;
 		position: relative;
 	}
 
@@ -38,29 +38,29 @@
 
 	&-input {
 		display: inline-block;
-		margin-right: 0;
-		width: 15em;
+		margin-inline-end: 0;
+		inline-size: 15em;
 	}
 
 	&-label {
 		color: @color-primary;
-		max-width: 15em;
+		max-inline-size: 15em;
 		display: inline-block;
 		vertical-align: middle;
 		text-overflow: ellipsis;
 		white-space: nowrap;
 		overflow: hidden;
 		cursor: pointer;
-		margin-left: 0.5px;
+		margin-inline-start: 0.5px;
 	}
 
 	&-icon,
 	&-button {
-		width: 2em;
+		inline-size: 2em;
 	}
 
 	&-content {
-		width: 100%;
-		line-height: normal;
+		inline-size: 100%;
+		line-block-size: normal;
 	}
 }

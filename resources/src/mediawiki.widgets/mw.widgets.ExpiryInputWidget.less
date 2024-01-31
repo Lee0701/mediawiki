@@ -1,7 +1,7 @@
 // TODO: Redefined here to avoid importing variables.less;
-@width-breakpoint-desktop: 1000px;
+@width-breakpoint-deskinset-block-start: 1000px;
 
-@wm-expirywidget-text-width: 43.3em;
+@wm-expirywidget-text-inline-size: 43.3em;
 
 .mw-widget-ExpiryWidget.mw-widget-ExpiryWidget-hasDatePicker {
 	.oo-ui-buttonSelectWidget {
@@ -11,7 +11,7 @@
 
 	.oo-ui-textInputWidget.mw-widget-ExpiryWidget-relative {
 		display: inline-block;
-		max-width: @wm-expirywidget-text-width;
+		max-inline-size: @wm-expirywidget-text-width;
 	}
 
 	.mw-widget-selectWithInputWidget {
@@ -24,20 +24,20 @@
 
 	.mw-widget-selectWithInputWidget.mw-widget-ExpiryWidget-relative .oo-ui-textInputWidget {
 		display: inline-block;
-		max-width: 22.8em;
+		max-inline-size: 22.8em;
 	}
 
 	.mw-widgets-datetime-dateTimeInputWidget {
-		margin-top: 0;
-		margin-bottom: 0;
-		max-width: @wm-expirywidget-text-width;
+		margin-block-start: 0;
+		margin-block-end: 0;
+		max-inline-size: @wm-expirywidget-text-width;
 
 		.mw-widgets-datetime-dateTimeInputWidget-handle {
-			max-height: 2.286em;
+			max-block-size: 2.286em;
 		}
 	}
 
-	@media ( max-width: ( @width-breakpoint-desktop - 1px ) ) {
+	@media ( max-inline-size: ( @width-breakpoint-desktop - 1px ) ) {
 		.mw-widget-selectWithInputWidget {
 			display: block;
 		}
@@ -46,8 +46,8 @@
 		.mw-widget-selectWithInputWidget.mw-widget-ExpiryWidget-relative .oo-ui-textInputWidget,
 		.mw-widgets-datetime-dateTimeInputWidget {
 			display: block;
-			max-width: 50em;
-			margin-top: 0.5em;
+			max-inline-size: 50em;
+			margin-block-start: 0.5em;
 		}
 	}
 }

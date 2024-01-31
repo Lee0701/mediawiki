@@ -8,7 +8,7 @@
 	border: 0;
 	border-spacing: 4px;
 	margin: 0;
-	width: 100%;
+	inline-size: 100%;
 	/* Ensure that colums are of equal width */
 	table-layout: fixed;
 
@@ -21,7 +21,7 @@
 			text-align: right;
 			font-weight: bold;
 			font-size: 1.25em;
-			line-height: 1.2;
+			line-block-size: 1.2;
 
 			&:before {
 				content: attr( data-marker );
@@ -35,11 +35,11 @@
 	}
 
 	col.diff-marker {
-		width: 2%;
+		inline-size: 2%;
 	}
 
 	.diff-content {
-		width: 48%;
+		inline-size: 48%;
 	}
 }
 
@@ -93,7 +93,7 @@
 	-moz-tab-size: 4;
 	/* stylelint-disable-next-line plugin/no-unsupported-browser-features */
 	tab-size: 4;
-	line-height: 1.6;
+	line-block-size: 1.6;
 	vertical-align: top;
 	// Fallback for browsers that don't support break-spaces, mainly IE11
 	white-space: pre-wrap;
@@ -207,17 +207,17 @@
 	&:after {
 		display: block;
 		color: #202122;
-		margin-top: -1.25em;
+		margin-block-start: -1.25em;
 	}
 }
 
-.mw-diff-movedpara-left:after,
-.rtl .mw-diff-movedpara-right:after {
+.mw-diff-movedpara-inset-inline-start:after,
+.rtl .mw-diff-movedpara-inset-inline-end:after {
 	content: '↪';
 }
 
-.mw-diff-movedpara-right:after,
-.rtl .mw-diff-movedpara-left:after {
+.mw-diff-movedpara-inset-inline-end:after,
+.rtl .mw-diff-movedpara-inset-inline-start:after {
 	content: '↩';
 }
 

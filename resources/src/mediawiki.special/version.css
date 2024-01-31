@@ -16,14 +16,14 @@ th.mw-version-ext-col-label {
 }
 
 .mw-version-credits {
-	column-width: 18em;
-	-moz-column-width: 18em;
-	-webkit-column-width: 18em;
+	column-inline-size: 18em;
+	-moz-column-inline-size: 18em;
+	-webkit-column-inline-size: 18em;
 }
 
 .mw-version-credits ul {
-	margin-top: 0;
-	margin-bottom: 0;
+	margin-block-start: 0;
+	margin-block-end: 0;
 }
 
 .mw-version-license-info strong {

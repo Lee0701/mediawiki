@@ -11,4 +11,4 @@
 .selector { /*@noflip*/ background-image: /*@embed*/ url(simple-ltr.gif); }
 
 /* Complex test for T288943 */
-/*@noflip*/ .selector-ltr[ data-foo='bar' ]:empty { border-left: 10px none; border-right: 0 none; }
+/*@noflip*/ .selector-ltr[ data-foo='bar' ]:empty { border-inline-start: 10px none; border-inline-end: 0 none; }

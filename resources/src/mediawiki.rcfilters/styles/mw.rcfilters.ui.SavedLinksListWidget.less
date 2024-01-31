@@ -4,12 +4,12 @@
 	&-placeholder {
 		&-title {
 			font-weight: bold;
-			margin-bottom: 0.4375em; // 7px / 16
-			margin-top: 0.1875em; // 3px / 16
+			margin-block-end: 0.4375em; // 7px / 16
+			margin-block-start: 0.1875em; // 3px / 16
 		}
 
 		&-description {
-			line-height: 1.5em; // 24px / 16
+			line-block-size: 1.5em; // 24px / 16
 		}
 
 		// Extra specificity needed to override OOUI rule that sets white-space: nowrap;
@@ -24,8 +24,8 @@
 			// Override OOUI option widget rules for icons
 			// we want the icon to appear at the top near the
 			// title, not in the middle of the multiline option
-			top: 0.7em !important; /* stylelint-disable-line declaration-no-important */
-			height: inherit !important; /* stylelint-disable-line declaration-no-important */
+			inset-block-start: 0.7em !important; /* stylelint-disable-line declaration-no-important */
+			block-size: inherit !important; /* stylelint-disable-line declaration-no-important */
 		}
 	}
 }

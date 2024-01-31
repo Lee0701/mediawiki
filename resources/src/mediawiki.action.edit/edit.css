@@ -3,8 +3,8 @@
  */
 
 .mw-toolbar-editbutton {
-	width: 23px;
-	height: 22px;
+	inline-size: 23px;
+	block-size: 22px;
 	cursor: pointer;
 	vertical-align: middle;
 	display: inline-block;

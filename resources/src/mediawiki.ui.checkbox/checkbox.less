@@ -28,7 +28,7 @@
 	display: table;
 	// Position relatively so we can make use of absolute pseudo elements
 	position: relative;
-	line-height: @size-input-binary;
+	line-block-size: @size-input-binary;
 	vertical-align: middle;
 
 	* {
@@ -41,10 +41,10 @@
 		display: table-cell;
 		position: relative;
 		// Ensure the invisible input takes up the required `width` & `height`
-		width: @size-input-binary;
-		height: @size-input-binary;
+		inline-size: @size-input-binary;
+		block-size: @size-input-binary;
 		// Support: Firefox mobile to override user-agent stylesheet, see T73750
-		max-width: none;
+		max-inline-size: none;
 		// Hide `input[type=checkbox]` and instead style the label that follows
 		// Support: VoiceOver. Use `opacity` so that VoiceOver can still identify the checkbox
 		opacity: 0;
@@ -53,7 +53,7 @@
 
 		& + label {
 			display: table-cell;
-			padding-left: 0.4em;
+			padding-inline-start: 0.4em;
 		}
 
 		// Pseudo `:before` element of the label after the checkbox now looks like a checkbox
@@ -67,11 +67,11 @@
 			box-sizing: border-box;
 			position: absolute;
 			// Ensure alignment of checkbox to middle of the text in long labels, see T85241
-			top: 50%;
-			left: 0;
-			width: @size-input-binary;
-			height: @size-input-binary;
-			margin-top: -( @size-input-binary / 2 );
+			inset-block-start: 50%;
+			inset-inline-start: 0;
+			inline-size: @size-input-binary;
+			block-size: @size-input-binary;
+			margin-block-start: -( @size-input-binary / 2 );
 			border: 1px solid @colorGray7;
 			border-radius: @border-radius-base;
 		}

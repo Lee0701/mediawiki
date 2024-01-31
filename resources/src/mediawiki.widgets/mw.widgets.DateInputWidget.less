@@ -27,10 +27,10 @@
 	&.oo-ui-indicatorElement .mw-widget-dateInputWidget-handle > .oo-ui-indicatorElement-indicator {
 		display: block;
 		position: absolute;
-		top: 0;
-		right: 0;
-		width: @size-indicator;
-		height: 100%;
+		inset-block-start: 0;
+		inset-inline-end: 0;
+		inline-size: @size-indicator;
+		block-size: 100%;
 		margin: 0 0.775em;
 	}
 
@@ -41,7 +41,7 @@
 	&-calendar {
 		background-color: #fff;
 		position: absolute;
-		margin-top: -2px;
+		margin-block-start: -2px;
 		border-radius: 2px;
 		box-shadow: 0 2px 2px 0 rgba( 0, 0, 0, 0.25 );
 		z-index: 1;

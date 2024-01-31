@@ -10,7 +10,7 @@
 .tipsy-inner {
 	background-color: #fff;
 	color: #000;
-	max-width: 15em;
+	max-inline-size: 15em;
 	padding: 5px 8px 4px 8px;
 	border: 1px solid #a2a9b1;
 	border-radius: 2px;
@@ -19,66 +19,66 @@
 .tipsy-arrow {
 	position: absolute;
 	background: url( images/tipsy.png ) no-repeat top left;
-	width: 11px;
-	height: 6px;
+	inline-size: 11px;
+	block-size: 6px;
 }
 
 /* @noflip */
 .tipsy-n .tipsy-arrow {
-	top: 0;
-	left: 50%;
-	margin-left: -5px;
+	inset-block-start: 0;
+	inset-inline-start: 50%;
+	margin-inline-start: -5px;
 }
 
 /* @noflip */
 .tipsy-nw .tipsy-arrow {
-	top: 0;
-	left: 10px;
+	inset-block-start: 0;
+	inset-inline-start: 10px;
 }
 
 /* @noflip */
 .tipsy-ne .tipsy-arrow {
-	top: 0;
-	right: 10px;
+	inset-block-start: 0;
+	inset-inline-end: 10px;
 }
 
 /* @noflip */
 .tipsy-s .tipsy-arrow {
-	bottom: 0;
-	left: 50%;
-	margin-left: -5px;
+	inset-block-end: 0;
+	inset-inline-start: 50%;
+	margin-inline-start: -5px;
 	background-position: bottom left;
 }
 
 /* @noflip */
 .tipsy-sw .tipsy-arrow {
-	bottom: 0;
-	left: 10px;
+	inset-block-end: 0;
+	inset-inline-start: 10px;
 	background-position: bottom left;
 }
 
 /* @noflip */
 .tipsy-se .tipsy-arrow {
-	bottom: 0;
-	right: 10px;
+	inset-block-end: 0;
+	inset-inline-end: 10px;
 	background-position: bottom left;
 }
 
 /* @noflip */
 .tipsy-e .tipsy-arrow {
-	top: 50%;
-	margin-top: -5px;
-	right: 0;
-	width: 6px;
-	height: 11px;
+	inset-block-start: 50%;
+	margin-block-start: -5px;
+	inset-inline-end: 0;
+	inline-size: 6px;
+	block-size: 11px;
 	background-position: top right;
 }
 
 /* @noflip */
 .tipsy-w .tipsy-arrow {
-	top: 50%;
-	margin-top: -5px;
-	left: 0;
-	width: 6px;
-	height: 11px;
+	inset-block-start: 50%;
+	margin-block-start: -5px;
+	inset-inline-start: 0;
+	inline-size: 6px;
+	block-size: 11px;
 }

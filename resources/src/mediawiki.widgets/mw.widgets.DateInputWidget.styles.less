@@ -34,10 +34,10 @@
 @transition-duration-medium: 250ms;
 
 .oo-ui-inline-spacing( @spacing, @cancelled-spacing: 0 ) {
-	margin-right: @spacing;
+	margin-inline-end: @spacing;
 
 	&:last-child {
-		margin-right: @cancelled-spacing;
+		margin-inline-end: @cancelled-spacing;
 	}
 }
 
@@ -45,11 +45,11 @@
 .mw-widget-dateInputWidget {
 	&.oo-ui-textInputWidget {
 		display: inline-block;
-		max-width: 21em;
+		max-inline-size: 21em;
 		// .oo-ui-inline-spacing( 0.5em ); already inherited from `.oo-ui-inputWidget`
 
 		.oo-ui-labelElement-label {
-			line-height: @line-height-widget-base;
+			line-block-size: @line-height-widget-base;
 		}
 	}
 
@@ -63,7 +63,7 @@
 		 * Ensures non-infused and infused widget have the same height.
 		 * Equal to line height + top padding + bottom padding
 		 */
-		max-height: 2.458em;
+		max-block-size: 2.458em;
 	}
 
 	// Ensure `.mw-widget-dateInputWidget-handle` similar appearance to OOUI's `.oo-ui-textInputWidget`
@@ -71,11 +71,11 @@
 		background-color: @background-color-base;
 		color: @color-base--emphasized;
 		box-sizing: border-box;
-		width: 100%;
+		inline-size: 100%;
 		border: @border-base;
 		border-radius: @border-radius-base;
 		padding: @padding-input-text;
-		line-height: @line-height-widget-base;
+		line-block-size: @line-height-widget-base;
 	}
 
 	&.oo-ui-widget-enabled {

@@ -50,8 +50,8 @@
 
 	&-highlight {
 		display: none;
-		width: 10px;
-		margin-right: @margin-circle;
+		inline-size: 10px;
+		margin-inline-end: @margin-circle;
 
 		&-highlighted {
 			display: inline-block;
@@ -61,7 +61,7 @@
 			content: '';
 			display: block;
 			position: absolute;
-			top: 50%;
+			inset-block-start: 50%;
 			.mw-rcfilters-circle( 10px, 10px, ~'-5px 0.5em 0 0' );
 		}
 

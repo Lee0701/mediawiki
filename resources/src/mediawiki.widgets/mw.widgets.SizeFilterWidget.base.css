@@ -11,7 +11,7 @@
 }
 
 .mw-widget-sizeFilterWidget .oo-ui-textInputWidget {
-	max-width: 10em;
+	max-inline-size: 10em;
 }
 
 /* PHP widget */
@@ -22,17 +22,17 @@
 }
 
 .mw-widget-sizeFilterWidget .oo-ui-radioSelectInputWidget .oo-ui-fieldLayout:first-child {
-	margin-right: 0.5em;
+	margin-inline-end: 0.5em;
 }
 
 /* JS widget */
 .mw-widget-sizeFilterWidget .oo-ui-radioSelectInputWidget .oo-ui-radioOptionWidget {
 	display: inline-table;
-	width: auto;
+	inline-size: auto;
 	margin: 0;
 	vertical-align: middle;
 }
 
 .mw-widget-sizeFilterWidget .oo-ui-radioSelectInputWidget .oo-ui-radioOptionWidget:first-child {
-	margin-right: 0.5em;
+	margin-inline-end: 0.5em;
 }

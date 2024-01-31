@@ -2,7 +2,7 @@
 
 .jquery-confirmable-button {
 	/* Automatically flipped */
-	margin-left: 1ex;
+	margin-inline-start: 1ex;
 }
 
 .jquery-confirmable-wrapper {

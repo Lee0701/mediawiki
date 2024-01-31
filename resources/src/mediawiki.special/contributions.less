@@ -13,7 +13,7 @@
 
 .mw-special-Contributions {
 	.oo-ui-fieldsetLayout-group {
-		max-width: 50em;
+		max-inline-size: 50em;
 
 		.oo-ui-panelLayout-padded.oo-ui-panelLayout-framed {
 			border: 0;
@@ -27,17 +27,17 @@
 	}
 
 	.mw-autocomplete-user.oo-ui-fieldLayout {
-		margin-top: @ooui-spacing-small;
+		margin-block-start: @ooui-spacing-small;
 	}
 
 	// Higher specificity needed to override OOUIHTMLForm styles.
 	.mw-htmlform-field-HTMLMultiSelectField.mw-htmlform-flatlist.oo-ui-fieldLayout {
-		margin-top: @ooui-spacing-small;
+		margin-block-start: @ooui-spacing-small;
 	}
 
 	.mw-htmlform-field-HTMLTagFilter ~ .mw-htmlform-field-HTMLCheckField.oo-ui-fieldLayout {
 		display: inline-block;
-		padding-right: @ooui-spacing-large;
+		padding-inline-end: @ooui-spacing-large;
 	}
 
 	// Clearfix for floated `.mw-htmlform-field-HTMLDateTimeField` below.
@@ -49,14 +49,14 @@
 
 	.oo-ui-fieldLayout.oo-ui-labelElement.mw-htmlform-field-HTMLDateTimeField {
 		margin: 0;
-		margin-right: @ooui-spacing-large;
+		margin-inline-end: @ooui-spacing-large;
 	}
 
-	@media all and ( min-width: @width-breakpoint-tablet ) {
+	@media all and ( min-inline-size: @width-breakpoint-tablet ) {
 		.mw-htmlform-field-HTMLDateTimeField {
 			float: left;
 			// Same `width` as DateInputWidget.
-			width: 21em;
+			inline-size: 21em;
 		}
 	}
 }

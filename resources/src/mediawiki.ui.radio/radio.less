@@ -35,7 +35,7 @@
 .client-js .mw-ui-radio {
 	// Position relatively so we can make use of absolute pseudo elements
 	position: relative;
-	line-height: @size-input-binary;
+	line-block-size: @size-input-binary;
 
 	* {
 		// reset font sizes (see T74727)
@@ -45,16 +45,16 @@
 
 	[ type='radio' ] {
 		// ensure the invisible radio takes up the required width
-		width: @size-input-binary;
-		height: @size-input-binary;
+		inline-size: @size-input-binary;
+		block-size: @size-input-binary;
 		// This is needed for Firefox mobile (See T73750 to workaround default Firefox stylesheet)
-		max-width: none;
+		max-inline-size: none;
 		// Hide `input[ type=radio ]` and instead style the label that follows
 		// Support: VoiceOver. Use `opacity` so that VoiceOver can still identify the radio
 		opacity: 0;
 
 		& + label {
-			padding-left: 0.4em;
+			padding-inline-start: 0.4em;
 
 			// Pseudo `:before` element of the label after the radio now looks like a radio
 			&:before {
@@ -62,9 +62,9 @@
 				background-color: #fff;
 				box-sizing: border-box;
 				position: absolute;
-				left: 0;
-				width: @size-input-binary;
-				height: @size-input-binary;
+				inset-inline-start: 0;
+				inline-size: @size-input-binary;
+				block-size: @size-input-binary;
 				border: 1px solid @colorGray7;
 				border-radius: 100%;
 			}
@@ -73,10 +73,10 @@
 			&:after {
 				content: ' ';
 				position: absolute;
-				top: 2px; // `px` unit due to pixel rounding error when using `@size-input-binary / 4`
-				left: 2px;
-				width: 1.14285em; // equals `@size-input-binary - 4px`
-				height: 1.14285em;
+				inset-block-start: 2px; // `px` unit due to pixel rounding error when using `@size-input-binary / 4`
+				inset-inline-start: 2px;
+				inline-size: 1.14285em; // equals `@size-input-binary - 4px`
+				block-size: 1.14285em;
 				border: 1px solid transparent;
 				border-radius: 100%;
 			}

@@ -3,24 +3,24 @@
 @import 'mw.rcfilters.variables.less';
 
 .mw-rcfilters-ui-filterTagMultiselectWidget {
-	max-width: none;
-	margin-top: 16px;
+	max-inline-size: none;
+	margin-block-start: 16px;
 
 	.oo-ui-tagMultiselectWidget-input input {
 		// Make sure this uses the interface direction, not the content direction
 		direction: ltr;
-		border-bottom-right-radius: 0;
-		height: 2.5em;
+		border-end-end-radius: 0;
+		block-size: 2.5em;
 	}
 
 	&.oo-ui-widget-enabled {
 		.oo-ui-tagMultiselectWidget-handle {
 			background-color: @colorGray15;
 			border: @border-base;
-			border-bottom: 0;
+			border-block-end: 0;
 			border-radius: @border-radius-base @border-radius-base 0 0;
 			padding: 0 0.6em 0.6em 0.6em;
-			line-height: normal;
+			line-block-size: normal;
 		}
 
 		// Hamburger menu for dropdown.
@@ -32,23 +32,23 @@
 	.mw-rcfilters-collapsed & {
 		// Taking from the handle, since border-bottom is set on the
 		// filters view which is hidden when collapsed
-		border-bottom: @border-base;
+		border-block-end: @border-base;
 
 		&.mw-rcfilters-ui-filterTagMultiselectWidget.oo-ui-widget-enabled .oo-ui-tagMultiselectWidget-handle {
-			padding-bottom: 0;
-			padding-top: 0;
+			padding-block-end: 0;
+			padding-block-start: 0;
 		}
 
 		.mw-rcfilters-ui-filterTagMultiselectWidget-wrapper-hideshow {
-			border-left: @border-base;
+			border-inline-start: @border-base;
 		}
 
 		&.oo-ui-tagMultiselectWidget-outlined {
 			// per T177206#4271707 we avoid keeping the collapsed element to take the whole width of the screen
 			// we are providing enough cues (keeping the labels) for it to be clear that the panel gets compacted
 			// to the left and the user not to feel lost with the transition.
-			width: auto;
-			max-width: 100%;
+			inline-size: auto;
+			max-inline-size: 100%;
 		}
 
 		// Hide inner elements
@@ -87,15 +87,15 @@
 				flex: 1 1 auto;
 				padding: 0.6em 0; // Same top padding as the handle
 				white-space: nowrap;
-				min-width: 0; // This has to be here to enable the text truncation
+				min-inline-size: 0; // This has to be here to enable the text truncation
 				overflow: hidden;
 				text-overflow: ellipsis;
 			}
 
 			&-hideshow {
 				flex: 0 0 auto;
-				margin-left: 0.5em;
-				padding-left: 0.5em;
+				margin-inline-start: 0.5em;
+				padding-inline-start: 0.5em;
 			}
 		}
 
@@ -108,7 +108,7 @@
 
 			&-savedQueryTitle {
 				color: @colorGray2;
-				padding-left: 1em;
+				padding-inline-start: 1em;
 				font-weight: bold;
 				vertical-align: top;
 				overflow: hidden;
@@ -121,33 +121,33 @@
 				// the ellipses isn't showing properly.
 				// This rule seems to convince Firefox to re-render,
 				// fix the label's width properly, and add the ellipses
-				max-width: 100%;
+				max-inline-size: 100%;
 			}
 		}
 	}
 
 	&-views {
 		&-input {
-			width: 100%;
+			inline-size: 100%;
 		}
 
 		&-select {
 			&-widget.oo-ui-widget {
 				display: block;
 				box-sizing: border-box;
-				height: 2.5em;
+				block-size: 2.5em;
 				border: @border-base;
-				border-left-width: 0;
+				border-left-inline-size: 0;
 				border-radius: 0 0 @border-radius-base 0;
 				// For `padding-right` using the 'left' value from
 				// .oo-ui-buttonElement-frameless.oo-ui-iconElement >
 				// .oo-ui-buttonElement-button > .oo-ui-iconElement-icon
-				padding-right: 0.35714286em;
+				padding-inline-end: 0.35714286em;
 				text-align: right;
 				white-space: nowrap;
 
 				.oo-ui-buttonWidget:first-child {
-					margin-left: 0;
+					margin-inline-start: 0;
 				}
 			}
 		}
@@ -158,16 +158,16 @@
 	}
 
 	&-cell-filters {
-		width: 100%;
+		inline-size: 100%;
 
 		div.oo-ui-tagMultiselectWidget-group {
-			margin-top: 0.2em;
+			margin-block-start: 0.2em;
 			display: block;
 		}
 	}
 
 	&-cell-reset {
 		text-align: right;
-		padding-left: 0.5em;
+		padding-inline-start: 0.5em;
 	}
 }

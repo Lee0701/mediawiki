@@ -39,11 +39,11 @@
 	 */
 	.mw-htmlform-submit-buttons {
 		.position-sticky();
-		bottom: 0;
+		inset-block-end: 0;
 		margin: -1px -1em -1em -1em;
 		padding: 1em;
 		background-color: #fff;
-		border-top: 1px solid #c8ccd1;
+		border-block-start: 1px solid #c8ccd1;
 		// Add top box shadow on top only to emphasize content is scrollable underneath `sticky`.
 		box-shadow: 0 -4px 4px -4px rgba( 0, 0, 0, 0.25 );
 	}
@@ -53,27 +53,27 @@
  * Hide, when not keyboard focussed.
  */
 .client-js .mw-navigation-hint:not( :focus ) {
-	height: 0;
+	block-size: 0;
 	overflow: hidden;
 }
 
 .mw-prefs-tabs {
 	.mw-prefs-fieldset-wrapper {
-		padding-left: 0;
-		padding-right: 0;
+		padding-inline-start: 0;
+		padding-inline-end: 0;
 
 		&:first-child {
-			padding-top: 0;
+			padding-block-start: 0;
 		}
 
 		&:last-child {
-			padding-bottom: 0;
+			padding-block-end: 0;
 		}
 	}
 
 	&.mw-prefs-tabs-searching {
 		// Prevent "Save" bar getting too close to results
-		min-height: 30em;
+		min-block-size: 30em;
 
 		/* Tab panels */
 		.oo-ui-tabPanelLayout:not( .mw-prefs-search-matched ),
@@ -92,7 +92,7 @@
 				background: #eaecf0;
 				padding: 5px 10px;
 				margin: 0 0 10px 0;
-				max-width: none;
+				max-inline-size: none;
 
 				> .oo-ui-labelElement-label {
 					display: inline;
@@ -134,13 +134,13 @@
 	margin: 8px 0;
 }
 
-@media all and ( min-width: @width-breakpoint-tablet ) {
+@media all and ( min-inline-size: @width-breakpoint-tablet ) {
 	.mw-prefs-search.oo-ui-fieldLayout {
-		width: 20em;
+		inline-size: 20em;
 	}
 
 	.mw-special-Preferences .mw-specialpage-summary {
-		margin-right: 21em;
+		margin-inline-end: 21em;
 
 		& + .mw-prefs-search.oo-ui-fieldLayout {
 			float: right;
@@ -149,10 +149,10 @@
 	}
 }
 
-@media all and ( max-width: ( @width-breakpoint-tablet - 1 ) ) {
+@media all and ( max-inline-size: ( @width-breakpoint-tablet - 1 ) ) {
 	.mw-prefs-search.oo-ui-fieldLayout {
 		position: sticky;
-		top: 0;
+		inset-block-start: 0;
 		z-index: 1;
 	}
 }
@@ -181,19 +181,19 @@
 		.mw-prefs-section-fieldset {
 			// <legend> is hard to style, so apply border to top of group
 			> .oo-ui-fieldsetLayout-group {
-				padding-top: 1.5em;
-				border-top: 1px solid #c8ccd1;
+				padding-block-start: 1.5em;
+				border-block-start: 1px solid #c8ccd1;
 			}
 
 			// Remove spacing between legend and underline
 			&.oo-ui-labelElement > .oo-ui-fieldsetLayout-header > .oo-ui-labelElement-label {
-				margin-bottom: 0;
+				margin-block-end: 0;
 			}
 		}
 
 		// Spacing between sections
 		> .oo-ui-menuLayout-content > .oo-ui-indexLayout-stackLayout > .oo-ui-tabPanelLayout:not( :last-child ) {
-			margin-bottom: 1em;
+			margin-block-end: 1em;
 		}
 	}
 	// Show preference section content on mobile
@@ -236,29 +236,29 @@
 
 // Highlight section header when linking to a section, e.g. Special:Preferences#mw-prefsection-editing-preview.
 .mw-prefs-tabs:not( .mw-prefs-tabs-searching ) .oo-ui-fieldsetLayout:target > .oo-ui-fieldsetLayout-header > .oo-ui-labelElement-label {
-	width: 100%;
+	inline-size: 100%;
 	background-color: #eaf3ff;
 	outline: 4px solid #eaf3ff;
 }
 
-@media all and ( min-width: @width-breakpoint-tablet ) {
+@media all and ( min-inline-size: @width-breakpoint-tablet ) {
 	/* Make the "Basic information" section more compact */
 	/* OOUI's `align: 'left'` for FieldLayouts sucks, so we do our own */
 	#mw-htmlform-info {
 		> .oo-ui-fieldLayout-align-top > .oo-ui-fieldLayout-body > .oo-ui-fieldLayout-header {
 			display: inline-block;
-			width: 20%;
+			inline-size: 20%;
 			padding: 0;
 			vertical-align: middle;
 		}
 
 		> .oo-ui-fieldLayout-align-top .oo-ui-fieldLayout-help {
-			margin-right: 0;
+			margin-inline-end: 0;
 		}
 
 		> .oo-ui-fieldLayout.oo-ui-fieldLayout-align-top > .oo-ui-fieldLayout-body > .oo-ui-fieldLayout-field {
 			display: inline-block;
-			width: 80%;
+			inline-size: 80%;
 			vertical-align: middle;
 		}
 	}
@@ -268,7 +268,7 @@
 .mw-htmlform-field-HTMLFloatField,
 .mw-htmlform-field-HTMLIntField {
 	.oo-ui-inputWidget {
-		max-width: 10em;
+		max-inline-size: 10em;
 	}
 }
 
@@ -277,11 +277,11 @@
 #wpTimeCorrection .oo-ui-dropdownInputWidget,
 #wpTimeCorrection .oo-ui-textInputWidget {
 	display: block;
-	max-width: 50em;
+	max-inline-size: 50em;
 }
 
 #wpTimeCorrection .oo-ui-textInputWidget {
-	margin-top: 0.5em;
+	margin-block-start: 0.5em;
 }
 
 /* T311717 - Styles for Special:Preferences on mobile
@@ -294,8 +294,8 @@ with params ?useskin=vector&useformat=mobile
 }
 
 .mw-mobile-prefsection {
-	padding-top: 0.3125em;
-	border-bottom: 0.0625em solid @colorGray12;
+	padding-block-start: 0.3125em;
+	border-block-end: 0.0625em solid @colorGray12;
 
 	// Style section headers as buttons when JS is enabled
 	.client-js & {
@@ -307,31 +307,31 @@ with params ?useskin=vector&useformat=mobile
 	}
 
 	&:last-child {
-		border-bottom: none; // stylelint-disable-line declaration-property-value-disallowed-list
+		border-block-end: none; // stylelint-disable-line declaration-property-value-disallowed-list
 	}
 }
 
 .oo-ui-iconWidget.mw-prefs-icon {
 	color: @colorGray2;
 	margin: 0.5em 0.5em 0 0.5em;
-	width: 1.25em;
-	height: 1.25em;
+	inline-size: 1.25em;
+	block-size: 1.25em;
 }
 
 .mw-prefs-title {
 	font-weight: normal;
 	font-size: 1em;
-	line-height: 1.25em;
+	line-block-size: 1.25em;
 	color: @colorGray2;
 }
 
 .mw-prefs-description {
 	font-weight: normal;
 	font-size: 0.875em;
-	line-height: 1.25em;
+	line-block-size: 1.25em;
 	padding: 0 2.7em;
 	color: @colorGray7;
-	margin-top: 0 !important; /* stylelint-disable-line declaration-no-important */
+	margin-block-start: 0 !important; /* stylelint-disable-line declaration-no-important */
 }
 
 .mw-prefs-header-container {
@@ -340,14 +340,14 @@ with params ?useskin=vector&useformat=mobile
 
 /* Override default inline styles for 'larger' dialog */
 .oo-ui-windowManager-modal > .oo-ui-dialog.oo-ui-window-active.mw-mobile-pref-window {
-	padding-top: 0;
+	padding-block-start: 0;
 }
 
 /* Overriding default inline styles for 'larger' dialog */
 .mw-mobile-pref-window > .oo-ui-window-frame {
-	width: auto !important; /* stylelint-disable-line declaration-no-important */
-	height: 100% !important; /* stylelint-disable-line declaration-no-important */
-	max-height: 100% !important; /* stylelint-disable-line declaration-no-important */
+	inline-size: auto !important; /* stylelint-disable-line declaration-no-important */
+	block-size: 100% !important; /* stylelint-disable-line declaration-no-important */
+	max-block-size: 100% !important; /* stylelint-disable-line declaration-no-important */
 }
 
 .oo-ui-window-body.mw-mobile-pref-dialog-body {
@@ -358,20 +358,20 @@ with params ?useskin=vector&useformat=mobile
 	/* T317110: sub-section title  */
 	.mw-prefs-fieldset-wrapper {
 		.oo-ui-fieldsetLayout-header {
-			border-bottom: 1px #000 solid;
-			max-width: 100%;
+			border-block-end: 1px #000 solid;
+			max-inline-size: 100%;
 
 			.oo-ui-labelElement-label {
 				font-size: 1em;
 				font-weight: bold;
-				line-height: 1.25em;
-				margin-bottom: 12px;
+				line-block-size: 1.25em;
+				margin-block-end: 12px;
 			}
 		}
 
 		/* T317110: sub-section and sub-sub-section titles  */
 		.mw-prefs-fieldset-wrapper .oo-ui-fieldsetLayout-header {
-			border-bottom: 0;
+			border-block-end: 0;
 		}
 	}
 
@@ -379,22 +379,22 @@ with params ?useskin=vector&useformat=mobile
 	[ class^='mw-htmlform-field' ] {
 		padding: 12px 0;
 		margin: 0;
-		border-bottom: 1px #eaecf0 solid;
+		border-block-end: 1px #eaecf0 solid;
 
 		&:last-child {
-			border-bottom: 0;
+			border-block-end: 0;
 		}
 	}
 
 	/* T317110: preference label  */
 	.oo-ui-labelElement-label {
-		line-height: 1.25em;
+		line-block-size: 1.25em;
 	}
 
 	/* T317110: help text  */
 	.oo-ui-inline-help {
 		font-size: 0.875em;
-		line-height: 1.25em;
+		line-block-size: 1.25em;
 	}
 
 	/* T317110: non-interactive text */
@@ -416,8 +416,8 @@ with params ?useskin=vector&useformat=mobile
 .oo-ui-iconWidget.mw-prefs-header-icon {
 	color: @colorGray2;
 	cursor: pointer;
-	width: 1.25em;
-	height: 1.25em;
+	inline-size: 1.25em;
+	block-size: 1.25em;
 	margin: 0 16px 0 17px;
 }
 
@@ -432,5 +432,5 @@ with params ?useskin=vector&useformat=mobile
 
 // stylelint-disable-next-line selector-class-pattern
 .content h5 {
-	padding-bottom: 0.25em !important; // stylelint-disable-line declaration-no-important
+	padding-block-end: 0.25em !important; // stylelint-disable-line declaration-no-important
 }

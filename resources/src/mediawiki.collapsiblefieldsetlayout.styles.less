@@ -9,38 +9,38 @@
 
 .client-js .mw-collapsibleFieldsetLayout.mw-collapsible .oo-ui-fieldsetLayout-header {
 	// Push legend up when JS is on, to increase clickable area.
-	margin-top: -@ooui-spacing-small;
-	margin-bottom: @ooui-spacing-small;
+	margin-block-start: -@ooui-spacing-small;
+	margin-block-end: @ooui-spacing-small;
 	// Add `padding-top` to make up for negative `margin` above.
 	padding: @ooui-spacing-small;
 	// Make space for toggle icon defined below.
-	padding-left: 24 / @ooui-font-size-browser / @ooui-font-size-base;
+	padding-inline-start: 24 / @ooui-font-size-browser / @ooui-font-size-base;
 
 	.oo-ui-labelElement-label {
-		margin-bottom: 0;
+		margin-block-end: 0;
 	}
 }
 
 // Trigger only when collapsible & JS is available via `.mw-collapsed`.
 .client-js .mw-collapsibleFieldsetLayout.mw-collapsed .oo-ui-fieldsetLayout-header {
-	min-height: 30px;
+	min-block-size: 30px;
 	// Negative margin to match the reduced distance on the top caused by the previous rule.
-	margin-bottom: -@ooui-spacing-medium;
+	margin-block-end: -@ooui-spacing-medium;
 }
 
 .mw-collapsibleFieldsetLayout.mw-collapsible {
 	.oo-ui-fieldsetLayout-header {
-		max-width: none;
+		max-inline-size: none;
 	}
 
 	.mw-collapsible-toggle .oo-ui-iconElement-icon {
 		position: absolute;
-		top: 0;
-		left: 0;
+		inset-block-start: 0;
+		inset-inline-start: 0;
 		// Special case: Reduce to `16px` icon size here.
-		min-width: 16px;
-		width: 16 / @ooui-font-size-browser / @ooui-font-size-base;
-		margin-right: 0.5em;
+		min-inline-size: 16px;
+		inline-size: 16 / @ooui-font-size-browser / @ooui-font-size-base;
+		margin-inline-end: 0.5em;
 	}
 
 	// When expanded: only 'collapse' icon visible

@@ -11,10 +11,10 @@
 }
 
 .mw-widget-complexTitleInputWidget .mw-widget-namespaceInputWidget {
-	max-width: 20em;
-	margin-right: 0.5em;
+	max-inline-size: 20em;
+	margin-inline-end: 0.5em;
 }
 
 .mw-widget-complexTitleInputWidget .mw-widget-titleInputWidget {
-	max-width: 29.5em;
+	max-inline-size: 29.5em;
 }

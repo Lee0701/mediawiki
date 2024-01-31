@@ -10,10 +10,10 @@
  */
 .ui-autocomplete {
 	position: absolute;
-	top: 0;
-	left: 0;
+	inset-block-start: 0;
+	inset-inline-start: 0;
 	cursor: default;
 }
 
 /* workarounds */
-* html .ui-autocomplete { width:1px; } /* without this, the menu expands to 100% in IE6 */
+* html .ui-autocomplete { inline-size:1px; } /* without this, the menu expands to 100% in IE6 */

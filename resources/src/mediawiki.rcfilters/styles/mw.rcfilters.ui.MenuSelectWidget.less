@@ -4,7 +4,7 @@
 
 .mw-rcfilters-ui-menuSelectWidget {
 	z-index: auto;
-	max-width: 650px;
+	max-inline-size: 650px;
 
 	&.oo-ui-menuSelectWidget-invisible {
 		display: block;
@@ -16,17 +16,17 @@
 	}
 
 	&-body {
-		max-height: 70vh;
-		min-width: 100%;
+		max-block-size: 70vh;
+		min-inline-size: 100%;
 	}
 
 	&-footer {
 		background-color: @colorGray15;
-		border-top: 1px solid @colorGray12;
+		border-block-start: 1px solid @colorGray12;
 		padding: 12 / @font-size-system-ui / @font-size-vector;
 
 		& + & {
-			border-top: 0;
+			border-block-start: 0;
 		}
 	}
 }

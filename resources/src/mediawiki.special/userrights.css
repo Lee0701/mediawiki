@@ -2,11 +2,11 @@
  * Styles for Special:UserRights
  */
 .mw-userrights-nested {
-	margin-left: 1.2em;
+	margin-inline-start: 1.2em;
 }
 
 .mw-userrights-nested span {
-	margin-left: 0.3em;
+	margin-inline-start: 0.3em;
 	display: inline-block;
 	vertical-align: middle;
 }
@@ -17,7 +17,7 @@
 
 .mw-userrights-groups * td,
 .mw-userrights-groups * th {
-	padding-right: 1.5em;
+	padding-inline-end: 1.5em;
 }
 
 .mw-userrights-groups * th {

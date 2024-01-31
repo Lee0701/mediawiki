@@ -10,8 +10,8 @@
 @mw-spinner-large-size: 32px;
 
 .mw-spinner-small {
-	width: @mw-spinner-small-size;
-	height: @mw-spinner-small-size;
+	inline-size: @mw-spinner-small-size;
+	block-size: @mw-spinner-small-size;
 
 	> .mw-spinner-container {
 		transform: scale( unit( @mw-spinner-small-size / 64 ) );
@@ -19,8 +19,8 @@
 }
 
 .mw-spinner-large {
-	width: @mw-spinner-large-size;
-	height: @mw-spinner-large-size;
+	inline-size: @mw-spinner-large-size;
+	block-size: @mw-spinner-large-size;
 
 	> .mw-spinner-container {
 		transform: scale( unit( @mw-spinner-large-size / 64 ) );
@@ -29,7 +29,7 @@
 
 .mw-spinner-block {
 	display: block;
-	width: 100%;
+	inline-size: 100%;
 	text-align: center;
 
 	> .mw-spinner-container {
@@ -38,11 +38,11 @@
 	}
 
 	&.mw-spinner-small > .mw-spinner-container {
-		min-width: @mw-spinner-small-size;
+		min-inline-size: @mw-spinner-small-size;
 	}
 
 	&.mw-spinner-large > .mw-spinner-container {
-		min-width: @mw-spinner-large-size;
+		min-inline-size: @mw-spinner-large-size;
 	}
 }
 
@@ -64,13 +64,13 @@
 	content: ' ';
 	display: block;
 	position: absolute;
-	top: 3px;
+	inset-block-start: 3px;
 	// If this was allowed to flip, then transform-origin would also need to be flipped,
 	// but that's not supported. Partial flipping causes visual issues (T292673).
 	/* @noflip */
-	left: 29px;
-	width: 5px;
-	height: 14px;
+	inset-inline-start: 29px;
+	inline-size: 5px;
+	block-size: 14px;
 	border-radius: 20%;
 	background: #000;
 }

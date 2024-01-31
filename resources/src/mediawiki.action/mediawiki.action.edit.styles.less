@@ -14,7 +14,7 @@
 
 /* Prevent editing textarea from jumping when toolbar is loaded */
 #toolbar {
-	height: 22px;
+	block-size: 22px;
 }
 
 /* Stop floats from intruding into edit area in previews */
@@ -30,7 +30,7 @@
  */
 .previewnote,
 #wikiPreview.ontop {
-	margin-bottom: 1em;
+	margin-block-end: 1em;
 }
 
 .mw-editform {
@@ -39,20 +39,20 @@
 		margin: 0;
 		display: block;
 		/* Ensure the textarea is not higher than browser's viewport on small screens */
-		max-height: 100vh;
+		max-block-size: 100vh;
 		/* But don't let it collapse into nothingness on really tiny screens */
-		min-height: 5em;
+		min-block-size: 5em;
 	}
 
 	/* Adjustments to edit form elements */
 	#editpage-copywarn {
 		font-size: 0.9em;
-		line-height: 1.26;
+		line-block-size: 1.26;
 	}
 
 	#wpSummaryWidget {
 		display: block;
-		margin-bottom: 1em;
+		margin-block-end: 1em;
 	}
 
 	#wpSummaryLabel {
@@ -61,15 +61,15 @@
 
 	#wpSummaryWidget,
 	#wpSummaryLabel .oo-ui-fieldLayout-header {
-		max-width: none;
+		max-inline-size: none;
 	}
 
 	.editCheckboxes .oo-ui-fieldLayout {
-		margin-right: 1em;
+		margin-inline-end: 1em;
 	}
 
 	.editHelp {
-		margin-left: 0.5em;
+		margin-inline-start: 0.5em;
 		vertical-align: middle;
 
 		a {
@@ -84,7 +84,7 @@
 	// Use buttonElement to include ButtonInputWidget and ButtonWidget
 	.editButtons .oo-ui-buttonElement,
 	.editHelp {
-		margin-top: 0.5em;
+		margin-block-start: 0.5em;
 	}
 
 	.cancelLink,
@@ -103,7 +103,7 @@
 	background-color: #eaecf0;
 	color: #202122;
 	border: 1px solid #c8ccd1;
-	border-top: 0;
+	border-block-start: 0;
 	padding: 1em 1em 1.5em 1em;
-	margin-bottom: 2em;
+	margin-block-end: 2em;
 }

@@ -7,7 +7,7 @@
 /* Hide, but keep accessible for screen-readers. */
 .redirectMsg p {
 	overflow: hidden;
-	height: 0;
+	block-size: 0;
 }
 
 .redirectText {
@@ -26,13 +26,13 @@
 	display: inline;
 	margin: 0;
 	padding: 0;
-	padding-left: 42px;
+	padding-inline-start: 42px;
 	background: transparent url( images/nextredirect-ltr.svg ) bottom left no-repeat;
 }
 
 /* @noflip */
 .mw-content-ltr .redirectText li:first-child {
-	padding-left: 47px;
+	padding-inline-start: 47px;
 	background: transparent url( images/redirect-ltr.svg ) bottom left no-repeat;
 }
 
@@ -41,12 +41,12 @@
 	display: inline;
 	margin: 0;
 	padding: 0;
-	padding-right: 42px;
+	padding-inline-end: 42px;
 	background: transparent url( images/nextredirect-rtl.svg ) bottom right no-repeat;
 }
 
 /* @noflip */
 .mw-content-rtl .redirectText li:first-child {
-	padding-right: 47px;
+	padding-inline-end: 47px;
 	background: transparent url( images/redirect-rtl.svg ) bottom right no-repeat;
 }

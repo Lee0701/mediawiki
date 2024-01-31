@@ -37,25 +37,25 @@
   overflow: hidden;
 }
 .oo-ui-bookletLayout-stackLayout > .oo-ui-panelLayout {
-  width: 100%;
+  inline-size: 100%;
   box-sizing: border-box;
 }
 .oo-ui-bookletLayout-outlinePanel-editable > .oo-ui-outlineSelectWidget {
-  height: auto;
+  block-size: auto;
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 2.5em;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
+  inset-block-end: 2.5em;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 }
 .oo-ui-bookletLayout-outlinePanel > .oo-ui-outlineControlsWidget {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 2.5em;
+  inset-block-end: 0;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
+  block-size: 2.5em;
 }
 .oo-ui-bookletLayout-stackLayout > .oo-ui-panelLayout {
   padding: 1.5em;
@@ -64,31 +64,31 @@
   box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.25);
 }
 .oo-ui-bookletLayout > .oo-ui-menuLayout-menu {
-  border-right: 1px solid #ddd;
+  border-inline-end: 1px solid #ddd;
 }
 
 .oo-ui-indexLayout {
   /* Use two classes to ensure increased specificity over menuLayout */
 }
 .oo-ui-indexLayout.oo-ui-menuLayout > .oo-ui-menuLayout-menu {
-  height: auto;
+  block-size: auto;
 }
 .oo-ui-indexLayout.oo-ui-menuLayout.oo-ui-menuLayout-expanded > .oo-ui-menuLayout-menu {
-  height: 3em;
+  block-size: 3em;
   white-space: nowrap;
 }
 .oo-ui-indexLayout.oo-ui-menuLayout.oo-ui-menuLayout-expanded > .oo-ui-menuLayout-content {
-  top: 3em;
+  inset-block-start: 3em;
 }
 .oo-ui-indexLayout-stackLayout > .oo-ui-panelLayout {
   padding: 1.5em;
 }
 
 .oo-ui-menuLayout {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
+  inset-block-end: 0;
 }
 .oo-ui-menuLayout-expanded,
 .oo-ui-menuLayout-expanded > .oo-ui-menuLayout-menu,
@@ -101,7 +101,7 @@
 .oo-ui-menuLayout-static.oo-ui-menuLayout-after,
 .oo-ui-menuLayout-static.oo-ui-menuLayout-before {
   display: table;
-  width: 100%;
+  inline-size: 100%;
 }
 .oo-ui-menuLayout-static.oo-ui-menuLayout-after > .oo-ui-menuLayout-menu,
 .oo-ui-menuLayout-static.oo-ui-menuLayout-before > .oo-ui-menuLayout-menu,
@@ -115,69 +115,69 @@
   transition: height 250ms, width 250ms, top 250ms, left 250ms, right 250ms, bottom 250ms;
 }
 .oo-ui-menuLayout > .oo-ui-menuLayout-menu {
-  height: 15.625em;
-  width: 15.625em;
+  block-size: 15.625em;
+  inline-size: 15.625em;
 }
 .oo-ui-menuLayout > .oo-ui-menuLayout-content {
-  top: 15.625em;
-  left: 15.625em;
-  right: 15.625em;
-  bottom: 15.625em;
+  inset-block-start: 15.625em;
+  inset-inline-start: 15.625em;
+  inset-inline-end: 15.625em;
+  inset-block-end: 15.625em;
 }
 .oo-ui-menuLayout.oo-ui-menuLayout-hideMenu > .oo-ui-menuLayout-menu {
-  width: 0 !important;
-  height: 0 !important;
+  inline-size: 0 !important;
+  block-size: 0 !important;
   overflow: hidden;
 }
 .oo-ui-menuLayout.oo-ui-menuLayout-hideMenu > .oo-ui-menuLayout-content {
-  top: 0 !important;
-  left: 0 !important;
-  right: 0 !important;
-  bottom: 0 !important;
+  inset-block-start: 0 !important;
+  inset-inline-start: 0 !important;
+  inset-inline-end: 0 !important;
+  inset-block-end: 0 !important;
 }
 .oo-ui-menuLayout.oo-ui-menuLayout-showMenu.oo-ui-menuLayout-top > .oo-ui-menuLayout-menu {
-  width: auto !important;
-  left: 0;
-  top: 0;
-  right: 0;
+  inline-size: auto !important;
+  inset-inline-start: 0;
+  inset-block-start: 0;
+  inset-inline-end: 0;
 }
 .oo-ui-menuLayout.oo-ui-menuLayout-showMenu.oo-ui-menuLayout-top > .oo-ui-menuLayout-content {
-  right: 0 !important;
-  bottom: 0 !important;
-  left: 0 !important;
+  inset-inline-end: 0 !important;
+  inset-block-end: 0 !important;
+  inset-inline-start: 0 !important;
 }
 .oo-ui-menuLayout.oo-ui-menuLayout-showMenu.oo-ui-menuLayout-after > .oo-ui-menuLayout-menu {
-  height: auto !important;
-  top: 0;
-  right: 0;
-  bottom: 0;
+  block-size: auto !important;
+  inset-block-start: 0;
+  inset-inline-end: 0;
+  inset-block-end: 0;
 }
 .oo-ui-menuLayout.oo-ui-menuLayout-showMenu.oo-ui-menuLayout-after > .oo-ui-menuLayout-content {
-  bottom: 0 !important;
-  left: 0 !important;
-  top: 0 !important;
+  inset-block-end: 0 !important;
+  inset-inline-start: 0 !important;
+  inset-block-start: 0 !important;
 }
 .oo-ui-menuLayout.oo-ui-menuLayout-showMenu.oo-ui-menuLayout-bottom > .oo-ui-menuLayout-menu {
-  width: auto !important;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inline-size: auto !important;
+  inset-inline-end: 0;
+  inset-block-end: 0;
+  inset-inline-start: 0;
 }
 .oo-ui-menuLayout.oo-ui-menuLayout-showMenu.oo-ui-menuLayout-bottom > .oo-ui-menuLayout-content {
-  left: 0 !important;
-  top: 0 !important;
-  right: 0 !important;
+  inset-inline-start: 0 !important;
+  inset-block-start: 0 !important;
+  inset-inline-end: 0 !important;
 }
 .oo-ui-menuLayout.oo-ui-menuLayout-showMenu.oo-ui-menuLayout-before > .oo-ui-menuLayout-menu {
-  height: auto !important;
-  bottom: 0;
-  left: 0;
-  top: 0;
+  block-size: auto !important;
+  inset-block-end: 0;
+  inset-inline-start: 0;
+  inset-block-start: 0;
 }
 .oo-ui-menuLayout.oo-ui-menuLayout-showMenu.oo-ui-menuLayout-before > .oo-ui-menuLayout-content {
-  top: 0 !important;
-  right: 0 !important;
-  bottom: 0 !important;
+  inset-block-start: 0 !important;
+  inset-inline-end: 0 !important;
+  inset-block-end: 0 !important;
 }
 
 
@@ -190,30 +190,30 @@
 .oo-ui-buttonSelectWidget {
   display: inline-block;
   border-radius: 3px;
-  margin-right: 0.5em;
+  margin-inline-end: 0.5em;
   z-index: 0;
   position: relative;
-  padding-bottom: 1px;
+  padding-block-end: 1px;
 }
 .oo-ui-buttonSelectWidget:last-child {
-  margin-right: 0;
+  margin-inline-end: 0;
 }
 .oo-ui-buttonSelectWidget:focus {
   outline: 0;
 }
 .oo-ui-buttonSelectWidget .oo-ui-buttonOptionWidget .oo-ui-buttonElement-button {
   border-radius: 0;
-  margin-right: -1px;
-  margin-bottom: -1px;
+  margin-inline-end: -1px;
+  margin-block-end: -1px;
 }
 .oo-ui-buttonSelectWidget .oo-ui-buttonOptionWidget:first-child .oo-ui-buttonElement-button {
-  border-bottom-left-radius: 3px;
-  border-top-left-radius: 3px;
+  border-end-start-radius: 3px;
+  border-start-start-radius: 3px;
 }
 .oo-ui-buttonSelectWidget .oo-ui-buttonOptionWidget:last-child .oo-ui-buttonElement-button {
-  border-bottom-right-radius: 3px;
-  border-top-right-radius: 3px;
-  margin-right: 0;
+  border-end-end-radius: 3px;
+  border-start-end-radius: 3px;
+  margin-inline-end: 0;
 }
 .oo-ui-buttonSelectWidget.oo-ui-widget-enabled:focus .oo-ui-buttonOptionWidget.oo-ui-optionWidget-selected .oo-ui-buttonElement-button {
   border-color: #ace;
@@ -252,10 +252,10 @@
 
 
 .oo-ui-toggleButtonWidget {
-  margin-right: 0.5em;
+  margin-inline-end: 0.5em;
 }
 .oo-ui-toggleButtonWidget:last-child {
-  margin-right: 0;
+  margin-inline-end: 0;
 }
 .oo-ui-toggleButtonWidget.oo-ui-widget-enabled.oo-ui-buttonElement-frameless.oo-ui-toggleWidget-on .oo-ui-buttonElement-button {
   background-color: rgba(0, 0, 0, 34/255);
@@ -273,9 +273,9 @@
   transform: translateZ(0);
   background-color: #ebebeb;
   background-image: linear-gradient(to bottom, #ddd 0, #fafafa 100%);
-  width: 4em;
-  height: 2em;
-  margin-right: 0.5em;
+  inline-size: 4em;
+  block-size: 2em;
+  margin-inline-end: 0.5em;
   border: 1px solid #ccc;
   border-radius: 1em;
   box-shadow: 0 0 0 #fff, inset 0 0.1em 0.2em #ddd;
@@ -289,7 +289,7 @@
   box-sizing: border-box;
 }
 .oo-ui-toggleSwitchWidget:last-child {
-  margin-right: 0;
+  margin-inline-end: 0;
 }
 .oo-ui-toggleSwitchWidget.oo-ui-widget-disabled {
   opacity: 0.5;
@@ -309,11 +309,11 @@
 .oo-ui-toggleSwitchWidget-grip {
   background-color: #ebebeb;
   background-image: linear-gradient(to bottom, #fafafa 0, #ddd 100%);
-  top: 0.25em;
-  left: 0.25em;
-  width: 1.5em;
-  height: 1.5em;
-  margin-top: -1px;
+  inset-block-start: 0.25em;
+  inset-inline-start: 0.25em;
+  inline-size: 1.5em;
+  block-size: 1.5em;
+  margin-block-start: -1px;
   border: 1px solid #ccc;
   border-radius: 1em;
   box-shadow: 0 0.1em 0.25em rgba(0, 0, 0, 0.1);
@@ -321,10 +321,10 @@
 }
 .oo-ui-toggleSwitchWidget-glow {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
+  inset-block-start: 0;
+  inset-block-end: 0;
+  inset-inline-end: 0;
+  inset-inline-start: 0;
   border-radius: 1em;
   box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.07);
   transition: opacity 250ms;
@@ -340,49 +340,49 @@
   opacity: 0;
 }
 .oo-ui-toggleWidget-off .oo-ui-toggleSwitchWidget-grip {
-  left: 0.25em;
-  margin-left: 0;
+  inset-inline-start: 0.25em;
+  margin-inline-start: 0;
 }
 .oo-ui-toggleWidget-on .oo-ui-toggleSwitchWidget-glow {
   opacity: 1;
 }
 .oo-ui-toggleWidget-on .oo-ui-toggleSwitchWidget-grip {
-  left: 2.25em;
-  margin-left: -2px;
+  inset-inline-start: 2.25em;
+  margin-inline-start: -2px;
 }
 
 .oo-ui-selectFileWidget-dropTarget {
   position: relative;
   cursor: default;
-  height: 8.815em;
+  block-size: 8.815em;
 }
 .oo-ui-selectFileWidget-dropTarget .oo-ui-selectFileWidget-dropLabel,
 .oo-ui-selectFileWidget-dropTarget .oo-ui-selectFileInputWidget-selectButton {
   display: none;
 }
 .oo-ui-selectFileWidget-dropTarget .oo-ui-selectFileWidget-thumbnail {
-  width: 7.815em;
+  inline-size: 7.815em;
   position: absolute;
-  top: 0.5em;
-  bottom: 0.5em;
-  left: 0.5em;
+  inset-block-start: 0.5em;
+  inset-block-end: 0.5em;
+  inset-inline-start: 0.5em;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
 }
 .oo-ui-selectFileWidget-dropTarget .oo-ui-selectFileWidget-thumbnail > .oo-ui-selectFileWidget-noThumbnail-icon {
   opacity: 0.4;
-  height: 7.815em;
-  width: 7.815em;
+  block-size: 7.815em;
+  inline-size: 7.815em;
 }
 .oo-ui-selectFileWidget-dropTarget .oo-ui-pendingElement-pending {
   background-repeat: repeat;
 }
 .oo-ui-selectFileWidget-dropTarget .oo-ui-selectFileInputWidget-info {
   display: block;
-  height: 100%;
-  width: auto;
-  margin-right: 0;
+  block-size: 100%;
+  inline-size: auto;
+  margin-inline-end: 0;
 }
 .oo-ui-selectFileWidget-dropTarget .oo-ui-selectFileInputWidget-info > .oo-ui-inputWidget-input {
   border: 0;
@@ -390,12 +390,12 @@
   background: transparent;
 }
 .oo-ui-selectFileWidget-dropTarget.oo-ui-selectFileWidget-withThumbnail .oo-ui-selectFileInputWidget-info {
-  margin-left: 8.815em;
+  margin-inline-start: 8.815em;
 }
 .oo-ui-selectFileWidget-dropTarget .oo-ui-selectFileInputWidget-label {
   display: block;
   position: relative;
-  top: inherit;
+  inset-block-start: inherit;
 }
 .oo-ui-selectFileWidget-dropTarget .oo-ui-selectFileInputWidget-fileName {
   display: block;
@@ -439,8 +439,8 @@
   background-size: 1.5625em 1.5625em;
 }
 .oo-ui-selectFileWidget-buttonOnly {
-  width: auto;
-  max-width: none;
+  inline-size: auto;
+  max-inline-size: none;
 }
 .oo-ui-selectFileWidget.oo-ui-widget-enabled.oo-ui-selectFileWidget-canDrop.oo-ui-selectFileWidget-dropTarget,
 .oo-ui-selectFileWidget.oo-ui-widget-enabled.oo-ui-selectFileWidget-canDrop .oo-ui-selectFileInputWidget-info > .oo-ui-inputWidget-input {
@@ -468,31 +468,31 @@
   font-size: 90.90909%;
 }
 .oo-ui-outlineOptionWidget.oo-ui-indicatorElement .oo-ui-labelElement-label {
-  padding-right: 1.5em;
+  padding-inline-end: 1.5em;
 }
 .oo-ui-outlineOptionWidget.oo-ui-indicatorElement .oo-ui-indicatorElement-indicator {
   opacity: 0.5;
 }
 .oo-ui-outlineOptionWidget-level-0.oo-ui-iconElement {
-  padding-left: 2.5em;
+  padding-inline-start: 2.5em;
 }
 .oo-ui-outlineOptionWidget-level-1 {
-  padding-left: 2.5em;
+  padding-inline-start: 2.5em;
 }
 .oo-ui-outlineOptionWidget-level-1.oo-ui-iconElement {
-  padding-left: 4.5em;
+  padding-inline-start: 4.5em;
 }
 .oo-ui-outlineOptionWidget-level-1.oo-ui-iconElement .oo-ui-iconElement-icon {
-  left: 2.5em;
+  inset-inline-start: 2.5em;
 }
 .oo-ui-outlineOptionWidget-level-2 {
-  padding-left: 5em;
+  padding-inline-start: 5em;
 }
 .oo-ui-outlineOptionWidget-level-2.oo-ui-iconElement {
-  padding-left: 7em;
+  padding-inline-start: 7em;
 }
 .oo-ui-outlineOptionWidget-level-2.oo-ui-iconElement .oo-ui-iconElement-icon {
-  left: 5em;
+  inset-inline-start: 5em;
 }
 .oo-ui-selectWidget-unpressed .oo-ui-outlineOptionWidget.oo-ui-optionWidget-selected {
   background-color: #a7dcff;
@@ -518,8 +518,8 @@
 }
 .oo-ui-outlineControlsWidget-items > .oo-ui-buttonWidget,
 .oo-ui-outlineControlsWidget-movers > .oo-ui-buttonWidget {
-  height: 2.5em;
-  width: 2.5em;
+  block-size: 2.5em;
+  inline-size: 2.5em;
   /* There's a lot of weird specific margins with weird specific selectors */
   margin: 0 !important;
   /* stylelint-disable-line declaration-no-important */
@@ -544,10 +544,10 @@
 .oo-ui-tabSelectWidget-mobile:after {
   content: '';
   position: absolute;
-  bottom: 0;
-  right: 0;
-  height: 2.5em;
-  width: 2em;
+  inset-block-end: 0;
+  inset-inline-end: 0;
+  block-size: 2.5em;
+  inline-size: 2em;
   pointer-events: none;
 }
 .oo-ui-tabSelectWidget-mobile.oo-ui-tabSelectWidget-framed:after {
@@ -559,7 +559,7 @@
   background-color: #ffffff;
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0, #fff 100%);
   background-color: transparent;
-  bottom: 2px;
+  inset-block-end: 2px;
 }
 .oo-ui-tabSelectWidget.oo-ui-widget-enabled:focus {
   outline: 0;
@@ -583,12 +583,12 @@
   cursor: default;
 }
 .oo-ui-tabSelectWidget-mobile .oo-ui-tabOptionWidget:last-child {
-  margin-right: 2em;
+  margin-inline-end: 2em;
 }
 .oo-ui-tabSelectWidget-framed .oo-ui-tabOptionWidget {
   border-width: 1px 1px 0 1px;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
+  border-start-start-radius: 3px;
+  border-start-end-radius: 3px;
 }
 .oo-ui-tabSelectWidget-framed .oo-ui-tabOptionWidget.oo-ui-optionWidget-selected {
   background-color: #fff;
@@ -635,19 +635,19 @@
 .oo-ui-tagMultiselectWidget {
   display: inline-block;
   position: relative;
-  width: 100%;
-  max-width: 50em;
+  inline-size: 100%;
+  max-inline-size: 50em;
 }
 .oo-ui-tagMultiselectWidget-handle {
-  width: 100%;
+  inline-size: 100%;
   display: block;
   position: relative;
 }
 .oo-ui-tagMultiselectWidget-handle > .oo-ui-iconElement-icon,
 .oo-ui-tagMultiselectWidget-handle > .oo-ui-indicatorElement-indicator {
   position: absolute;
-  top: 0;
-  height: 100%;
+  inset-block-start: 0;
+  block-size: 100%;
 }
 .oo-ui-tagMultiselectWidget-content {
   position: relative;
@@ -656,7 +656,7 @@
   display: inline;
 }
 .oo-ui-tagMultiselectWidget-outlined {
-  width: 100%;
+  inline-size: 100%;
 }
 .oo-ui-tagMultiselectWidget.oo-ui-widget-enabled.oo-ui-tagMultiselectWidget-inlined .oo-ui-tagMultiselectWidget-handle {
   cursor: text;
@@ -666,29 +666,29 @@
 }
 .oo-ui-tagMultiselectWidget-focusTrap {
   display: inline-block;
-  height: 1px;
-  width: 1px;
+  block-size: 1px;
+  inline-size: 1px;
 }
 .oo-ui-tagMultiselectWidget-focusTrap:focus {
   outline: 0;
 }
 .oo-ui-tagMultiselectWidget-handle {
   cursor: text;
-  min-height: 2.4em;
-  margin-right: 0.5em;
+  min-block-size: 2.4em;
+  margin-inline-end: 0.5em;
   padding: 0.15em 0.25em;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 3px;
   box-sizing: border-box;
 }
 .oo-ui-tagMultiselectWidget-handle:last-child {
-  margin-right: 0;
+  margin-inline-end: 0;
 }
 .oo-ui-tagMultiselectWidget-handle .oo-ui-tagMultiselectWidget-group > input {
   border: 0;
-  line-height: 1.675em;
+  line-block-size: 1.675em;
   margin: 0;
-  margin-left: 0.2em;
+  margin-inline-start: 0.2em;
   padding: 0;
   font-size: inherit;
   font-family: inherit;
@@ -718,27 +718,27 @@
   outline: 0;
 }
 .oo-ui-tagMultiselectWidget.oo-ui-iconElement .oo-ui-tagMultiselectWidget-handle {
-  padding-left: 2.475em;
+  padding-inline-start: 2.475em;
 }
 .oo-ui-tagMultiselectWidget.oo-ui-iconElement .oo-ui-tagMultiselectWidget-handle > .oo-ui-iconElement-icon {
-  left: 0;
+  inset-inline-start: 0;
   margin: 0 0.3em;
 }
 .oo-ui-tagMultiselectWidget.oo-ui-indicatorElement .oo-ui-tagMultiselectWidget-handle {
-  padding-right: 2.4875em;
+  padding-inline-end: 2.4875em;
 }
 .oo-ui-tagMultiselectWidget.oo-ui-indicatorElement .oo-ui-tagMultiselectWidget-handle > .oo-ui-indicatorElement-indicator {
-  right: 0;
+  inset-inline-end: 0;
   margin: 0 0.775em;
 }
 .oo-ui-tagMultiselectWidget.oo-ui-tagMultiselectWidget-outlined .oo-ui-tagMultiselectWidget-handle {
-  border-bottom: 0;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+  border-block-end: 0;
+  border-end-start-radius: 0;
+  border-end-end-radius: 0;
 }
 .oo-ui-tagMultiselectWidget.oo-ui-tagMultiselectWidget-outlined .oo-ui-inputWidget-input {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+  border-start-start-radius: 0;
+  border-start-end-radius: 0;
 }
 .oo-ui-tagMultiselectWidget.oo-ui-widget-enabled {
   background-color: #fff;
@@ -791,19 +791,19 @@
   background-image: linear-gradient(to bottom, #fafafa 0, #ddd 100%);
   color: #333;
   box-sizing: border-box;
-  width: auto;
-  max-width: 100%;
-  height: 1.71875em;
+  inline-size: auto;
+  max-inline-size: 100%;
+  block-size: 1.71875em;
   margin: 0.1em;
   border: 1px solid #ccc;
   border-radius: 3px;
   padding: 0 0.4em;
-  line-height: 1.640625em;
+  line-block-size: 1.640625em;
   vertical-align: middle;
 }
 .oo-ui-tagItemWidget.oo-ui-labelElement .oo-ui-labelElement-label {
   display: inline-block;
-  max-width: 100%;
+  max-inline-size: 100%;
   text-overflow: ellipsis;
   overflow: hidden;
 }
@@ -826,22 +826,22 @@
   display: none;
 }
 .oo-ui-tagItemWidget.oo-ui-widget-enabled:not( .oo-ui-tagItemWidget-fixed ) {
-  padding-right: 1.796875em;
+  padding-inline-end: 1.796875em;
 }
 .oo-ui-tagItemWidget.oo-ui-widget-enabled > .oo-ui-buttonElement {
   display: block;
-  width: 1.5625em;
+  inline-size: 1.5625em;
   position: absolute;
-  top: 0;
-  right: 0;
+  inset-block-start: 0;
+  inset-inline-end: 0;
 }
 .oo-ui-tagItemWidget.oo-ui-widget-enabled .oo-ui-buttonElement-button {
   display: block;
   transition: background-color 100ms;
 }
 .oo-ui-tagItemWidget.oo-ui-widget-enabled .oo-ui-buttonElement-button .oo-ui-iconElement-icon {
-  min-width: 14px;
-  width: 1.09375em;
+  min-inline-size: 14px;
+  inline-size: 1.09375em;
   margin: 0 0 0 0.234375em;
 }
 .oo-ui-tagItemWidget.oo-ui-widget-disabled {
@@ -858,24 +858,24 @@
 
 .oo-ui-searchWidget-query {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
 }
 .oo-ui-searchWidget-query .oo-ui-textInputWidget {
-  width: 100%;
+  inline-size: 100%;
 }
 .oo-ui-searchWidget-results {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  inset-block-end: 0;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
   overflow-x: hidden;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
 .oo-ui-searchWidget-query {
-  height: 4em;
+  block-size: 4em;
   padding: 0 1em;
   box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
 }
@@ -883,7 +883,7 @@
   margin: 0.75em 0;
 }
 .oo-ui-searchWidget-results {
-  top: 4em;
+  inset-block-start: 4em;
   padding: 1em;
-  line-height: 0;
+  line-block-size: 0;
 }

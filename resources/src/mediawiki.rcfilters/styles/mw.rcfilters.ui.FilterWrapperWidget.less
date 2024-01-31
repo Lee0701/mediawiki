@@ -7,24 +7,24 @@
 }
 
 .mw-rcfilters-ui-filterWrapperWidget {
-	width: 100%;
+	inline-size: 100%;
 	// Make sure this uses the interface direction, not the content direction
 	direction: ltr;
 
 	&-viewToggleButtons {
-		margin-top: 1em;
+		margin-block-start: 1em;
 	}
 
 	&-bottom {
 		.flex-display();
 		.flex();
 		flex-wrap: wrap;
-		margin-top: 1em;
+		margin-block-start: 1em;
 	}
 
 	&-bottom-mobile {
 		.oo-ui-buttonElement {
-			margin-bottom: 1em;
+			margin-block-end: 1em;
 
 			&-button {
 				text-align: left;
@@ -46,7 +46,7 @@
 			& > a {
 				white-space: normal;
 				/* stylelint-disable-next-line */
-				padding-top: 0 !important; //overrides .oo-ui-buttonElement-button
+				padding-block-start: 0 !important; //overrides .oo-ui-buttonElement-button
 			}
 		}
 	}

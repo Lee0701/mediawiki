@@ -41,7 +41,7 @@
 		color: @color-base;
 		border-color: @border-color-base--focus;
 		box-shadow: @box-shadow-primary--focus;
-		outline-width: 0;
+		outline-inline-size: 0;
 	}
 
 	input[ type='checkbox' ]:active + &,
@@ -62,7 +62,7 @@
 			}
 		}
 
-		@media all and ( max-width: @width-breakpoint-desktop ) {
+		@media all and ( max-inline-size: @width-breakpoint-desktop ) {
 			&.mw-ui-icon-with-label-desktop {
 				// stylelint-disable-next-line declaration-no-important
 				color: transparent !important;
@@ -109,7 +109,7 @@
 		font-weight: bold;
 
 		&:not( .mw-ui-icon-element ) {
-			min-height: 32px;
+			min-block-size: 32px;
 		}
 
 		// If a sibling element is a checklist, the state should also apply to the button.
@@ -262,9 +262,9 @@
 	// </div>
 	&.mw-ui-block {
 		display: block;
-		width: 100%;
-		margin-left: auto;
-		margin-right: auto;
+		inline-size: 100%;
+		margin-inline-start: auto;
+		margin-inline-end: auto;
 	}
 }
 
@@ -292,22 +292,22 @@ a.mw-ui-button {
 // </div><div style="clear:both"></div>
 .mw-ui-button-group {
 	& > * {
-		min-width: 48px;
+		min-inline-size: 48px;
 		border-radius: 0;
 		float: left;
 
 		&:first-child {
-			border-top-left-radius: @border-radius-base;
-			border-bottom-left-radius: @border-radius-base;
+			border-start-start-radius: @border-radius-base;
+			border-end-start-radius: @border-radius-base;
 		}
 
 		&:not( :first-child ) {
-			border-left: 0;
+			border-inline-start: 0;
 		}
 
 		&:last-child {
-			border-top-right-radius: @border-radius-base;
-			border-bottom-right-radius: @border-radius-base;
+			border-start-end-radius: @border-radius-base;
+			border-end-end-radius: @border-radius-base;
 		}
 	}
 

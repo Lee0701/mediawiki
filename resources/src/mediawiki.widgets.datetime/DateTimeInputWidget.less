@@ -3,9 +3,9 @@
 .mw-widgets-datetime-dateTimeInputWidget {
 	display: inline-block;
 	position: relative;
-	width: 100%;
+	inline-size: 100%;
 	// Hack: Set maximum width equivalent to DateInputWidgets calendar popup
-	max-width: 24.275em;
+	max-inline-size: 24.275em;
 	.oo-ui-inline-spacing( 0.5em );
 	vertical-align: middle;
 
@@ -26,8 +26,8 @@
 		color: @color-base;
 		display: inline-block;
 		box-sizing: border-box;
-		width: 100%;
-		height: @size-base;
+		inline-size: 100%;
+		block-size: @size-base;
 		border: @border-base;
 		border-radius: @border-radius-base;
 		padding: 0 @padding-horizontal-input-text;
@@ -43,27 +43,27 @@
 			background-position: center center;
 			background-repeat: no-repeat;
 			position: absolute;
-			top: 0;
+			inset-block-start: 0;
 			z-index: 1;
 		}
 
 		> .oo-ui-iconElement-icon {
-			left: @padding-start-input-text-icon;
-			width: @size-icon;
-			height: @size-icon;
+			inset-inline-start: @padding-start-input-text-icon;
+			inline-size: @size-icon;
+			block-size: @size-icon;
 		}
 
 		> .oo-ui-indicatorElement-indicator {
-			right: @padding-horizontal-base;
+			inset-inline-end: @padding-horizontal-base;
 		}
 	}
 
 	&.oo-ui-iconElement .mw-widgets-datetime-dateTimeInputWidget-handle {
-		padding-left: @padding-start-input-text-icon-label;
+		padding-inline-start: @padding-start-input-text-icon-label;
 	}
 
 	&.oo-ui-indicatorElement .mw-widgets-datetime-dateTimeInputWidget-handle {
-		padding-right: @min-size-indicator + 2 * @padding-horizontal-input-text;
+		padding-inline-end: @min-size-indicator + 2 * @padding-horizontal-input-text;
 	}
 
 	&-field {
@@ -72,12 +72,12 @@
 		box-sizing: content-box;
 		border: 0;
 		border-radius: @border-radius-base;
-		padding-top: @padding-vertical-base;
-		padding-bottom: @padding-vertical-base;
+		padding-block-start: @padding-vertical-base;
+		padding-block-end: @padding-vertical-base;
 		box-shadow: none;
 		font-size: inherit;
 		font-family: inherit;
-		line-height: @line-height-widget-base;
+		line-block-size: @line-height-widget-base;
 		text-align: center;
 		vertical-align: top;
 
@@ -107,13 +107,13 @@
 
 	&-clearButton {
 		// Override `&-field` from above
-		padding-top: 0;
-		padding-bottom: 0;
-		padding-left: @padding-start-button-clear;
+		padding-block-start: 0;
+		padding-block-end: 0;
+		padding-inline-start: @padding-start-button-clear;
 
 		// `&.oo-ui-iconElement` needed for specificity
 		&.oo-ui-iconElement > .oo-ui-buttonElement-button {
-			padding-top: @padding-top-button-clear;
+			padding-block-start: @padding-top-button-clear;
 		}
 
 		.oo-ui-iconElement-icon {

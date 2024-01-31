@@ -22,15 +22,15 @@
   margin: 0;
 }
 .oo-ui-toolGroupTool:first-child > .oo-ui-popupToolGroup {
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
+  border-start-start-radius: 3px;
+  border-end-start-radius: 3px;
 }
 .oo-ui-toolGroupTool:last-child > .oo-ui-popupToolGroup {
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
+  border-start-end-radius: 3px;
+  border-end-end-radius: 3px;
 }
 .oo-ui-toolGroupTool > .oo-ui-popupToolGroup > .oo-ui-popupToolGroup-handle {
-  height: 1.875em;
+  block-size: 1.875em;
   padding: 0.3125em;
   border-color: transparent;
   border-style: solid;
@@ -38,7 +38,7 @@
   margin: -1px 0;
 }
 .oo-ui-toolGroupTool > .oo-ui-popupToolGroup.oo-ui-labelElement > .oo-ui-popupToolGroup-handle .oo-ui-labelElement-label {
-  line-height: 2.1em;
+  line-block-size: 2.1em;
 }
 
 .oo-ui-toolGroup {
@@ -63,7 +63,7 @@
   cursor: default;
 }
 .oo-ui-toolbar-narrow .oo-ui-toolGroup + .oo-ui-toolGroup {
-  margin-left: 0;
+  margin-inline-start: 0;
 }
 .oo-ui-toolGroup.oo-ui-widget-enabled:hover {
   border-color: rgba(0, 0, 0, 0.1);
@@ -91,17 +91,17 @@
   border: 1px solid transparent;
 }
 .oo-ui-barToolGroup-tools > .oo-ui-tool:first-child {
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
+  border-start-start-radius: 3px;
+  border-end-start-radius: 3px;
 }
 .oo-ui-barToolGroup-tools > .oo-ui-tool:last-child {
-  margin-right: -1px;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
+  margin-inline-end: -1px;
+  border-start-end-radius: 3px;
+  border-end-end-radius: 3px;
 }
 .oo-ui-barToolGroup-tools > .oo-ui-tool > .oo-ui-tool-link {
   color: inherit;
-  height: 1.875em;
+  block-size: 1.875em;
   padding: 0.3125em;
 }
 .oo-ui-barToolGroup-tools > .oo-ui-tool > .oo-ui-tool-link .oo-ui-iconElement-icon {
@@ -112,7 +112,7 @@
   display: none;
 }
 .oo-ui-barToolGroup-tools > .oo-ui-tool > .oo-ui-tool-link .oo-ui-tool-title {
-  line-height: 2.1em;
+  line-block-size: 2.1em;
 }
 .oo-ui-barToolGroup-tools > .oo-ui-tool:not( .oo-ui-tool-with-icon ) > .oo-ui-tool-link .oo-ui-iconElement-noIcon {
   display: none;
@@ -183,8 +183,8 @@
 
 .oo-ui-popupToolGroup {
   position: relative;
-  height: 2.5em;
-  min-width: 2.5em;
+  block-size: 2.5em;
+  min-inline-size: 2.5em;
 }
 .oo-ui-popupToolGroup-handle {
   display: block;
@@ -207,7 +207,7 @@
 }
 .oo-ui-popupToolGroup-tools .oo-ui-tool-link {
   display: table;
-  width: 100%;
+  inline-size: 100%;
   vertical-align: middle;
   white-space: nowrap;
 }
@@ -220,73 +220,73 @@
   text-align: right;
 }
 .oo-ui-toolbar-narrow .oo-ui-popupToolGroup {
-  min-width: 1.875em;
+  min-inline-size: 1.875em;
 }
 .oo-ui-popupToolGroup.oo-ui-iconElement {
-  min-width: 3.125em;
+  min-inline-size: 3.125em;
 }
 .oo-ui-toolbar-narrow .oo-ui-popupToolGroup.oo-ui-iconElement {
-  min-width: 2.5em;
+  min-inline-size: 2.5em;
 }
 .oo-ui-popupToolGroup.oo-ui-indicatorElement.oo-ui-iconElement {
-  min-width: 4.375em;
+  min-inline-size: 4.375em;
 }
 .oo-ui-toolbar-narrow .oo-ui-popupToolGroup.oo-ui-indicatorElement.oo-ui-iconElement {
-  min-width: 3.75em;
+  min-inline-size: 3.75em;
 }
 .oo-ui-popupToolGroup.oo-ui-labelElement .oo-ui-popupToolGroup-handle .oo-ui-labelElement-label {
-  line-height: 2.6em;
+  line-block-size: 2.6em;
   margin: 0 1em;
 }
 .oo-ui-toolbar-narrow .oo-ui-popupToolGroup.oo-ui-labelElement .oo-ui-popupToolGroup-handle .oo-ui-labelElement-label {
   margin: 0 0.5em;
 }
 .oo-ui-popupToolGroup.oo-ui-labelElement.oo-ui-iconElement .oo-ui-popupToolGroup-handle .oo-ui-labelElement-label {
-  margin-left: 3em;
+  margin-inline-start: 3em;
 }
 .oo-ui-toolbar-narrow .oo-ui-popupToolGroup.oo-ui-labelElement.oo-ui-iconElement .oo-ui-popupToolGroup-handle .oo-ui-labelElement-label {
-  margin-left: 2.5em;
+  margin-inline-start: 2.5em;
 }
 .oo-ui-popupToolGroup.oo-ui-labelElement.oo-ui-indicatorElement .oo-ui-popupToolGroup-handle .oo-ui-labelElement-label {
-  margin-right: 2.25em;
+  margin-inline-end: 2.25em;
 }
 .oo-ui-toolbar-narrow .oo-ui-popupToolGroup.oo-ui-labelElement.oo-ui-indicatorElement .oo-ui-popupToolGroup-handle .oo-ui-labelElement-label {
-  margin-right: 1.75em;
+  margin-inline-end: 1.75em;
 }
 .oo-ui-popupToolGroup-handle {
-  height: 2.5em;
+  block-size: 2.5em;
 }
 .oo-ui-popupToolGroup-handle .oo-ui-indicatorElement-indicator,
 .oo-ui-popupToolGroup-handle .oo-ui-iconElement-icon {
   position: absolute;
-  top: 0;
+  inset-block-start: 0;
 }
 .oo-ui-popupToolGroup-handle .oo-ui-indicatorElement-indicator {
-  width: 0.9375em;
-  height: 0.9375em;
+  inline-size: 0.9375em;
+  block-size: 0.9375em;
   margin: 0.78125em;
-  right: 0;
+  inset-inline-end: 0;
 }
 .oo-ui-toolbar-narrow .oo-ui-popupToolGroup-handle .oo-ui-indicatorElement-indicator {
-  right: -0.3125em;
+  inset-inline-end: -0.3125em;
 }
 .oo-ui-popupToolGroup-handle .oo-ui-iconElement-icon {
   margin: 0.46875em;
-  left: 0.3125em;
+  inset-inline-start: 0.3125em;
 }
 .oo-ui-toolbar-narrow .oo-ui-popupToolGroup-handle .oo-ui-iconElement-icon {
-  left: 0;
+  inset-inline-start: 0;
 }
 .oo-ui-popupToolGroup-header {
-  line-height: 2.6em;
+  line-block-size: 2.6em;
   margin: 0 0.6em;
   font-weight: bold;
 }
 .oo-ui-popupToolGroup-active.oo-ui-widget-enabled {
   background-color: #f8fbfd;
   background-image: linear-gradient(to bottom, #f1f7fb 0, #fff 100%);
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+  border-end-start-radius: 0;
+  border-end-end-radius: 0;
   box-shadow: inset 0 0.0875em 0.0875em 0 rgba(0, 0, 0, 0.07);
 }
 .oo-ui-popupToolGroup.oo-ui-flaggedElement-progressive {
@@ -321,26 +321,26 @@
 }
 .oo-ui-popupToolGroup-tools .oo-ui-tool-link .oo-ui-iconElement-icon {
   display: table-cell;
-  min-width: 1.5625em;
-  width: 1.5625em;
-  height: 1.5625em;
+  min-inline-size: 1.5625em;
+  inline-size: 1.5625em;
+  block-size: 1.5625em;
   vertical-align: middle;
 }
 .oo-ui-popupToolGroup-tools .oo-ui-tool-link .oo-ui-tool-checkIcon {
   display: none;
 }
 .oo-ui-popupToolGroup-tools .oo-ui-tool-link .oo-ui-tool-title {
-  padding-left: 0.5em;
+  padding-inline-start: 0.5em;
 }
 .oo-ui-popupToolGroup-tools .oo-ui-tool-link .oo-ui-tool-accel,
 .oo-ui-popupToolGroup-tools .oo-ui-tool-link .oo-ui-tool-title {
-  line-height: 2em;
+  line-block-size: 2em;
 }
 .oo-ui-popupToolGroup-tools .oo-ui-tool-link .oo-ui-tool-accel {
   color: #767676;
 }
 .oo-ui-popupToolGroup-tools .oo-ui-tool-link .oo-ui-tool-accel:not( :empty ) {
-  padding-left: 3em;
+  padding-inline-start: 3em;
 }
 
 .oo-ui-listToolGroup-tools .oo-ui-tool {
@@ -400,10 +400,10 @@
   display: block;
 }
 .oo-ui-menuToolGroup .oo-ui-popupToolGroup-handle {
-  min-width: 10em;
+  min-inline-size: 10em;
 }
 .oo-ui-toolbar-narrow .oo-ui-menuToolGroup .oo-ui-popupToolGroup-handle {
-  min-width: 8.125em;
+  min-inline-size: 8.125em;
 }
 .oo-ui-menuToolGroup-tools {
   padding: 0.3125em 0 0.3125em 0;
@@ -445,7 +445,7 @@
   clear: both;
 }
 .oo-ui-toolbar-bar {
-  line-height: 1;
+  line-block-size: 1;
   position: relative;
 }
 .oo-ui-toolbar-tools,
@@ -504,11 +504,11 @@
   background-image: linear-gradient(to bottom, #fff 0, #f1f7fb 100%);
 }
 .oo-ui-toolbar-position-top > .oo-ui-toolbar-bar {
-  border-bottom: 1px solid #ccc;
+  border-block-end: 1px solid #ccc;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
 }
 .oo-ui-toolbar-position-bottom > .oo-ui-toolbar-bar {
-  border-top: 1px solid #ccc;
+  border-block-start: 1px solid #ccc;
   box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.1);
 }
 .oo-ui-toolbar-bar .oo-ui-toolbar-bar {

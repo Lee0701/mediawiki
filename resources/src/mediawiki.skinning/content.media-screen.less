@@ -3,7 +3,7 @@
 figure[ typeof~='mw:File/Thumb' ],
 figure[ typeof~='mw:File/Frame' ] {
 	border: @border-thumbinner-screen;
-	border-bottom: 0;  // No border to figcaption
+	border-block-end: 0;  // No border to figcaption
 	background-color: @background-color-thumbinner-screen;
 
 	> a:first-child,
@@ -16,7 +16,7 @@ figure[ typeof~='mw:File/Frame' ] {
 
 	> figcaption {
 		border: @border-thumbinner-screen;
-		border-top: 0;
+		border-block-start: 0;
 		background-color: @background-color-thumbinner-screen;
 
 		/* In mw-core the font-size is duplicated, 94% in thumbinner
@@ -39,19 +39,19 @@ figure[ typeof~='mw:File/Frame' ] {
 figure[ typeof~='mw:File/Thumb' ]:not( [ typeof~='mw:Error' ] ) {
 	> figcaption:before {
 		content: '';
-		width: 15px;
-		height: 11px;
+		inline-size: 15px;
+		block-size: 11px;
 
 		.mw-content-ltr & {
 			/* @noflip */
-			margin-left: 3px;
+			margin-inline-start: 3px;
 			/* @noflip */
 			float: right;
 		}
 
 		.mw-content-rtl & {
 			/* @noflip */
-			margin-right: 3px;
+			margin-inline-end: 3px;
 			/* @noflip */
 			float: left;
 		}
@@ -64,21 +64,21 @@ figure[ typeof~='mw:File/Thumb' ]:not( [ typeof~='mw:Error' ] ) {
 
 	> a.mw-file-description:after {
 		content: '';
-		width: 15px;
-		height: 11px;
+		inline-size: 15px;
+		block-size: 11px;
 		position: absolute;
-		bottom: -11px;
+		inset-block-end: -11px;
 
 		.mw-content-ltr & {
 			/* @noflip */
-			right: 6px;
+			inset-inline-end: 6px;
 			/* @noflip */
 			background-image: @background-image-magnify-ltr;
 		}
 
 		.mw-content-rtl & {
 			/* @noflip */
-			left: 6px;
+			inset-inline-start: 6px;
 			/* @noflip */
 			background-image: @background-image-magnify-rtl;
 		}

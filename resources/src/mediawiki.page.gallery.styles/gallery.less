@@ -88,7 +88,7 @@ ul.mw-gallery-packed-overlay {
 
 ul.mw-gallery-packed-hover div.gallerytextwrapper {
 	overflow: hidden;
-	height: 0;
+	block-size: 0;
 }
 
 ul.mw-gallery-packed-hover li.gallerybox:hover div.gallerytextwrapper,
@@ -98,10 +98,10 @@ ul.mw-gallery-packed-hover li.gallerybox.mw-gallery-focused div.gallerytextwrapp
 	background: #fff;
 	background: rgba( 255, 255, 255, 0.8 );
 	padding: 5px 10px;
-	bottom: 0;
-	left: 0; /* Needed for IE */
-	height: auto;
-	max-height: 40%;
+	inset-block-end: 0;
+	inset-inline-start: 0; /* Needed for IE */
+	block-size: auto;
+	max-block-size: 40%;
 	overflow: hidden;
 	font-weight: bold;
 	margin: 2px; /* correspond to style on div.thumb */
@@ -114,7 +114,7 @@ ul.mw-gallery-packed-hover li.gallerybox.mw-gallery-focused div.gallerytextwrapp
 
 	&:hover {
 		overflow: visible;
-		max-height: none;
+		max-block-size: none;
 
 		p {
 			text-overflow: clip;
@@ -144,7 +144,7 @@ ul.gallery.gallery.gallery.mw-gallery-slideshow {
 		text-align: center;
 
 		&.mw-gallery-slideshow-thumbnails-toggled {
-			margin-bottom: 1.3em;
+			margin-block-end: 1.3em;
 		}
 	}
 
@@ -157,11 +157,11 @@ ul.gallery.gallery.gallery.mw-gallery-slideshow {
 			margin: 0 2em;
 
 			&:first-child {
-				margin-left: 0;
+				margin-inline-start: 0;
 			}
 
 			&:last-child {
-				margin-right: 0;
+				margin-inline-end: 0;
 			}
 		}
 	}
@@ -172,7 +172,7 @@ ul.gallery.gallery.gallery.mw-gallery-slideshow {
 		}
 
 		> div {
-			max-width: 120px;
+			max-inline-size: 120px;
 		}
 
 		div.thumb {

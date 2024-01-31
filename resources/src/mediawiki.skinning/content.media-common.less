@@ -57,11 +57,11 @@ figure[ typeof~='mw:File/Frameless' ] {
 figure[ typeof~='mw:File/Thumb' ],
 figure[ typeof~='mw:File/Frame' ] {
 	margin: 0;  // Maybe belongs in element.css for figure
-	margin-bottom: @margin-bottom-thumb;
+	margin-block-end: @margin-bottom-thumb;
 	display: table;
 	text-align: center;
 	border-collapse: collapse;
-	line-height: 0;
+	line-block-size: 0;
 
 	> a {
 		// The addition of the class is needed for higher specificity
@@ -115,7 +115,7 @@ figure[ typeof~='mw:File/Frame' ] {
 	&.mw-halign-none {
 		/* Override the default margin from mw-content-xxx above */
 		margin: 0;
-		margin-bottom: @margin-bottom-thumb;
+		margin-block-end: @margin-bottom-thumb;
 		clear: none;
 		float: none;
 	}
@@ -140,11 +140,11 @@ figure[ typeof~='mw:File/Frame' ] {
 		 */
 		> span.mw-broken-media {
 			display: inline-block;
-			line-height: 1.6em;
+			line-block-size: 1.6em;
 			/* The extra horizontal margin here is to make up for the lack of a border */
 			margin: 3px 4px;
 			/* This is hardcoded in Linker::makeThumbLink2 for broken media */
-			width: 180px;
+			inline-size: 180px;
 			/* Styles the text of broken media */
 			font-size: @font-size-thumbinner-screen;
 		}
@@ -153,7 +153,7 @@ figure[ typeof~='mw:File/Frame' ] {
 	> figcaption {
 		display: table-caption;
 		caption-side: bottom;
-		line-height: @line-height-thumbcaption;
+		line-block-size: @line-height-thumbcaption;
 
 		/**
 		 * The "break-word" value is deprecated, however, it's well supported
@@ -194,12 +194,12 @@ figure[ typeof~='mw:File/Frame' ] {
 
 // Remove bogus padding from framed images without captions
 figure[ typeof~='mw:File/Frame' ] > figcaption:empty {
-	padding-bottom: 0;
+	padding-block-end: 0;
 }
 
 // However, it's still necessary for thumbs because the magnifying icon is present
 figure[ typeof~='mw:File/Thumb' ] > figcaption:empty {
-	padding-bottom: 3px;
+	padding-block-end: 3px;
 }
 
 /**

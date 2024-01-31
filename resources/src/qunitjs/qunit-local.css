@@ -5,5 +5,5 @@
 	white-space: normal;
 	border-spacing: 0;
 	table-layout: auto;
-	width: auto;
+	inline-size: auto;
 }

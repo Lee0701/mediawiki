@@ -4,7 +4,7 @@
 .mw-apisandbox-toolbar {
 	background: #fff;
 	.position-sticky();
-	top: 0;
+	inset-block-start: 0;
 	padding: 0.5em 0;
 	box-shadow: 0 2px 0 0 rgba( 0, 0, 0, 0.1 );
 	text-align: right;
@@ -36,31 +36,31 @@
 	}
 
 	& > .oo-ui-popupWidget-popup > .oo-ui-popupWidget-body > .oo-ui-buttonWidget {
-		padding-left: 0.5em;
-		width: 1%;
+		padding-inline-start: 0.5em;
+		inline-size: 1%;
 	}
 
 	&-help {
-		min-width: 25em;
+		min-inline-size: 25em;
 
 		.oo-ui-popupWidget-body-padded {
 			// TODO: Upstream this fix (T266223)
-			margin-top: 5px;
+			margin-block-start: 5px;
 		}
 	}
 }
 
 .mw-apisandbox-help-field {
-	border-bottom: 1px solid rgba( 0, 0, 0, 0.1 );
-	padding-bottom: 12px;
+	border-block-end: 1px solid rgba( 0, 0, 0, 0.1 );
+	padding-block-end: 12px;
 
 	&:last-child {
-		border-bottom: 0;
+		border-block-end: 0;
 	}
 }
 
 .mw-apisandbox-optionalWidget {
-	width: 100%;
+	inline-size: 100%;
 
 	&.oo-ui-widget-disabled {
 		position: relative;
@@ -69,17 +69,17 @@
 
 	&-cover {
 		position: absolute;
-		left: 0;
-		right: 0;
-		top: 0;
-		bottom: 0;
+		inset-inline-start: 0;
+		inset-inline-end: 0;
+		inset-block-start: 0;
+		inset-block-end: 0;
 		z-index: 2;
 		cursor: pointer;
 	}
 
 	&-fields {
 		display: table;
-		width: 100%;
+		inline-size: 100%;
 	}
 
 	&-widget,
@@ -89,9 +89,9 @@
 	}
 
 	&-checkbox {
-		width: 1%; /* Will be expanded by content */
+		inline-size: 1%; /* Will be expanded by content */
 		white-space: nowrap;
-		padding-left: 0.5em;
+		padding-inline-start: 0.5em;
 	}
 }
 
@@ -106,22 +106,22 @@
 
 .mw-apisandbox-help-field,
 .mw-apisandbox-widget-field {
-	max-width: 70em;
+	max-inline-size: 70em;
 }
 
 .mw-apisandbox-widget-field {
 	.oo-ui-textInputWidget {
 		/* Leave at least enough space for icon, indicator, and a sliver of text */
-		min-width: 6em;
+		min-inline-size: 6em;
 	}
 
 	&.oo-ui-labelElement.oo-ui-fieldLayout-align-left > .oo-ui-fieldLayout-body {
 		& > .oo-ui-fieldLayout-header {
-			width: 30%;
+			inline-size: 30%;
 		}
 
 		& > .oo-ui-fieldLayout-field {
-			width: 70%;
+			inline-size: 70%;
 		}
 	}
 }
@@ -139,7 +139,7 @@
 }
 
 .oo-ui-menuOptionWidget .mw-apisandbox-flag {
-	line-height: 1.42857143em;
+	line-block-size: 1.42857143em;
 	color: @color-base--subtle;
 	float: right;
 }

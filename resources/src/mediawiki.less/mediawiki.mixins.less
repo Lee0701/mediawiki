@@ -122,9 +122,9 @@
 }
 
 .column-width( @value ) {
-	-webkit-column-width: @value; // Chrome 4-49, Safari 3.2-8.4
-	-moz-column-width: @value; // Firefox 1.5-49
-	column-width: @value; // IE 10+, Opera 11.5+
+	-webkit-column-inline-size: @value; // Chrome 4-49, Safari 3.2-8.4
+	-moz-column-inline-size: @value; // Firefox 1.5-49
+	column-inline-size: @value; // IE 10+, Opera 11.5+
 }
 
 .column-break-inside-avoid() {
@@ -148,7 +148,7 @@
 .flex( @grow: 1, @shrink: 1, @width: auto, @order: 1 ) {
 	// Current spec
 	justify-content: space-between;
-	width: @width; // Fallback for flex-basis
+	inline-size: @width; // Fallback for flex-basis
 	flex: @grow @shrink @width;
 	order: @order;
 }
@@ -207,8 +207,8 @@
 	display: block;
 	position: absolute !important; /* stylelint-disable-line declaration-no-important */
 	clip: rect( 1px, 1px, 1px, 1px );
-	width: 1px;
-	height: 1px;
+	inline-size: 1px;
+	block-size: 1px;
 	margin: -1px;
 	border: 0;
 	padding: 0;

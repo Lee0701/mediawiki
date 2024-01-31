@@ -1,7 +1,7 @@
 @import 'mediawiki.ui/variables.less';
 
 // On mobile devices the table layout is collapsed.
-@media all and ( max-width: @width-breakpoint-tablet ) {
+@media all and ( max-inline-size: @width-breakpoint-tablet ) {
 	.mw-special-Listfiles {
 		// stylelint-disable selector-class-pattern
 		thead,
@@ -31,8 +31,8 @@
 		.TablePager_col_img_description {
 			color: @colorGray5;
 			margin: 0.5em 0 0;
-			padding-bottom: 40px;
-			line-height: 1.5;
+			padding-block-end: 40px;
+			line-block-size: 1.5;
 		}
 
 		.TablePager_col_img_user_text {

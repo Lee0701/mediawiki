@@ -3,7 +3,7 @@
 figure[ typeof~='mw:File/Thumb' ],
 figure[ typeof~='mw:File/Frame' ] {
 	border: @border-thumbinner-print;
-	border-bottom: 0;  // No border to figcaption
+	border-block-end: 0;  // No border to figcaption
 	background-color: @background-color-thumbinner-print;
 
 	> a:first-child,
@@ -15,7 +15,7 @@ figure[ typeof~='mw:File/Frame' ] {
 
 	> figcaption {
 		border: @border-thumbinner-print;
-		border-top: 0;
+		border-block-start: 0;
 		background-color: @background-color-thumbinner-print;
 		font-size: @font-size-thumbinner-print;
 		color: @color-thumbinner-print;

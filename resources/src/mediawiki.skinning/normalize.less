@@ -24,7 +24,7 @@ main {
 hr {
 	// Support Firefox: Add the correct box sizing.
 	box-sizing: content-box;
-	height: 0;
+	block-size: 0;
 	// Support Edge and IE: Show the overflow.
 	overflow: visible;
 }
@@ -32,7 +32,7 @@ hr {
 // Inline elements
 
 abbr[ title ] {
-	border-bottom: 1px dotted;
+	border-block-end: 1px dotted;
 	cursor: help;
 }
 
@@ -40,7 +40,7 @@ abbr[ title ] {
 @supports ( text-decoration: underline dotted ) {
 	abbr[ title ] {
 		// Support Chrome 57- and Firefox 39-: Remove the bottom border.
-		border-bottom: 0;
+		border-block-end: 0;
 		// Support Chrome, Edge, IE, Opera, and Safari: Add the correct text decoration.
 		text-decoration: underline dotted;
 	}
@@ -59,7 +59,7 @@ samp {
 sub,
 sup {
 	// Prevent citations and subscripts from interfering with the line height.
-	line-height: 1;
+	line-block-size: 1;
 }
 
 // Embedded content

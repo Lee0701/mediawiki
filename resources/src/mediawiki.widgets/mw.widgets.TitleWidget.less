@@ -6,7 +6,7 @@
  */
 .mw-widget-titleWidget-menu {
 	.mw-widget-titleOptionWidget {
-		line-height: normal;
+		line-block-size: normal;
 
 		&-description {
 			color: #72777d;
@@ -16,25 +16,25 @@
 	&-withImages {
 		.mw-widget-titleOptionWidget {
 			box-sizing: border-box;
-			min-height: 3.75em;
-			padding-left: 4.75em;
-			padding-top: 0.5em;
-			padding-bottom: 0.5em;
+			min-block-size: 3.75em;
+			padding-inline-start: 4.75em;
+			padding-block-start: 0.5em;
+			padding-block-end: 0.5em;
 
 			&:not( :last-child ) {
-				margin-bottom: 2px;
+				margin-block-end: 2px;
 			}
 
 			> .oo-ui-labelElement-label {
-				line-height: 2.8em;
+				line-block-size: 2.8em;
 			}
 
 			&.oo-ui-iconElement {
 				> .oo-ui-iconElement-icon {
 					display: block;
-					width: 3.75em;
-					height: 3.75em;
-					left: 0;
+					inline-size: 3.75em;
+					block-size: 3.75em;
+					inset-inline-start: 0;
 
 					&:not( .mw-widget-titleOptionWidget-hasImage ) {
 						background-size: 80%;
@@ -62,7 +62,7 @@
 	&-withDescriptions {
 		.mw-widget-titleOptionWidget {
 			> .oo-ui-labelElement-label {
-				line-height: 1.5em;
+				line-block-size: 1.5em;
 			}
 
 			&-description {

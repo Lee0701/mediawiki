@@ -12,36 +12,36 @@
 
 	&-helpIcon {
 		position: absolute;
-		top: 50%;
+		inset-block-start: 50%;
 		transform: translateY( -50% );
 	}
 
 	&-header {
-		border-bottom: 1px solid @colorGray12;
+		border-block-end: 1px solid @colorGray12;
 		background-color: @colorGray15;
 
 		&-highlight {
-			min-width: 1em;
+			min-inline-size: 1em;
 			// Using the same padding that the filter item
 			// uses, so the button is aligned with the highlight
 			// buttons for the filters
-			padding-right: 12 / @font-size-system-ui / @font-size-vector;
+			padding-inline-end: 12 / @font-size-system-ui / @font-size-vector;
 			// Set the left-padding here, so that the invert buttons have the same padding
-			padding-left: 12 / @font-size-system-ui / @font-size-vector;
+			padding-inline-start: 12 / @font-size-system-ui / @font-size-vector;
 		}
 
 		&-back {
-			width: 1em;
+			inline-size: 1em;
 
 			.mw-rcfilters-ui-filterMenuHeaderWidget-backButton:first-child {
 				// Overwrite `.oo-ui-buttonElement-frameless.oo-ui-iconElement:first-child`
-				margin-left: 0;
+				margin-inline-start: 0;
 			}
 		}
 
 		&-title {
 			position: relative;
-			width: 100%;
+			inline-size: 100%;
 		}
 	}
 

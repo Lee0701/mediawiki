@@ -1,15 +1,15 @@
 .mw-widgets-rowWidget {
 	clear: left;
 	float: left;
-	margin-bottom: -1px;
-	width: 100%;
+	margin-block-end: -1px;
+	inline-size: 100%;
 }
 
 .mw-widgets-rowWidget-label {
 	display: block;
-	margin-right: 5%;
-	padding-top: 0.5em;
-	width: 35%;
+	margin-inline-end: 5%;
+	padding-block-start: 0.5em;
+	inline-size: 35%;
 }
 
 .mw-widgets-rowWidget > .mw-widgets-rowWidget-label {
@@ -22,8 +22,8 @@
 
 .mw-widgets-rowWidget > .mw-widgets-rowWidget-cells > .oo-ui-inputWidget {
 	float: left;
-	margin-right: -1px;
-	width: 8em;
+	margin-inline-end: -1px;
+	inline-size: 8em;
 }
 
 .mw-widgets-rowWidget > .mw-widgets-rowWidget-cells > .oo-ui-inputWidget > input,

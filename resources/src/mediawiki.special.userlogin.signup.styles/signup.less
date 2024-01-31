@@ -14,9 +14,9 @@
 		float: left;
 		/* Override the right margin of the form to give space in case a benefits
 		 * column appears to the side. */
-		margin-right: 100px;
+		margin-inline-end: 100px;
 		/* Override `.mw-body-content` to ensure useful, readable paragraphs */
-		line-height: 1.4;
+		line-block-size: 1.4;
 	}
 }
 
@@ -25,7 +25,7 @@
 	float: left;
 
 	h2 {
-		margin-bottom: 30px;
+		margin-block-end: 30px;
 	}
 }
 
@@ -58,7 +58,7 @@
 	font-family: 'Linux Libertine', 'Georgia', 'Times', serif;
 	font-weight: normal;
 	font-size: 2.2em;
-	line-height: 1.2;
+	line-block-size: 1.2;
 	text-align: center;
 }
 
@@ -67,10 +67,10 @@
 	display: block;
 	font-size: 1.2em;
 	color: #54595d;
-	margin-top: 1em;
+	margin-block-start: 1em;
 	/* 80px wide icon plus "margin" */
 	padding: 0 0 0 95px;
 	/* Matches max icon height, ensures icon emblem is visible */
-	min-height: 75px;
+	min-block-size: 75px;
 	text-align: center;
 }

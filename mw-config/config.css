@@ -3,30 +3,30 @@ body {
 	background-color: #f7f7f7;
 	margin: 0;
 	font-family: sans-serif;
-	line-height: 1.5;
+	line-block-size: 1.5;
 }
 
 #mw-page-base {
-	height: 3.5em;
+	block-size: 3.5em;
 }
 
 #mw-head-base {
 	position: absolute;
-	top: 0;
-	right: 0;
-	width: 100%;
+	inset-block-start: 0;
+	inset-inline-end: 0;
+	inline-size: 100%;
 }
 
 #mw-panel {
 	position: absolute;
-	top: 0;
-	left: 0;
-	width: 11em;
+	inset-block-start: 0;
+	inset-inline-start: 0;
+	inline-size: 11em;
 }
 
 #content {
 	background-color: #fff;
-	margin-left: 11em;
+	margin-inline-start: 11em;
 	border: 1px solid #aaa;
 	padding: 1.25em 1.5em 1.5em 1.5em;
 }
@@ -48,29 +48,29 @@ body {
 }
 
 .config-section {
-	margin-top: 2em;
+	margin-block-start: 2em;
 }
 
 .config-block {
-	margin-top: 2em;
+	margin-block-start: 2em;
 	display: block;
 }
 
 .config-block-label {
 	display: block;
-	margin-bottom: 0.2em;
+	margin-block-end: 0.2em;
 }
 
 .config-block-label label,
 .config-label {
 	font-weight: bold;
-	padding-right: 0.5em;
-	padding-top: 0.2em;
+	padding-inline-end: 0.5em;
+	padding-block-start: 0.2em;
 }
 
 .config-block-elements {
 	display: flex;
-	margin-left: 2em;
+	margin-inline-start: 2em;
 }
 
 .config-block-elements li {
@@ -88,7 +88,7 @@ body {
 .config-page-list {
 	background-color: #fff;
 	float: right;
-	width: 12em;
+	inline-size: 12em;
 	border: 1px solid #aaa;
 	padding: 0.5em;
 	/* 3em left margin to leave space between the list and the page-content */
@@ -108,8 +108,8 @@ body {
 }
 
 .config-submit input {
-	margin-left: 0.5em;
-	margin-right: 0.5em;
+	margin-inline-start: 0.5em;
+	margin-inline-end: 0.5em;
 }
 
 .config-page-disabled {
@@ -127,18 +127,18 @@ body {
 
 .config-message {
 	display: list-item;
-	margin-left: 2em;
-	margin-top: 0.5em;
+	margin-inline-start: 2em;
+	margin-block-start: 0.5em;
 }
 
 .config-input-text {
-	width: 20em;
-	margin-right: 1em;
-	height: 30px;
+	inline-size: 20em;
+	margin-inline-end: 1em;
+	block-size: 30px;
 }
 
 .config-input-check {
-	margin-left: 10em;
+	margin-inline-start: 10em;
 }
 
 .config-skins-item {
@@ -148,8 +148,8 @@ body {
 }
 
 .config-skins-item .config-input-check {
-	margin-left: 10em;
-	width: 20em;
+	margin-inline-start: 10em;
+	inline-size: 20em;
 	float: left;
 }
 
@@ -161,7 +161,7 @@ body {
 	background-color: #fff;
 	color: #f00;
 	font-weight: bold;
-	left: 1em;
+	inset-inline-start: 1em;
 	font-size: 100%;
 }
 
@@ -180,7 +180,7 @@ body {
 .success-message {
 	color: #008a00;
 	display: block;
-	margin-top: 1em;
+	margin-block-start: 1em;
 	font-weight: bold;
 	font-size: 110%;
 }
@@ -188,7 +188,7 @@ body {
 .config-cc-wrapper {
 	clear: left;
 	/* If you change this height, also change it in WebInstallerOptions::submitCC() */
-	height: 54em;
+	block-size: 54em;
 }
 
 .config-plainlink a {
@@ -198,22 +198,22 @@ body {
 
 .config-download-link {
 	font-size: 1.8em;
-	margin-left: 2em;
+	margin-inline-start: 2em;
 }
 
 .config-download-link a {
 	background: url( images/download-32.png ) no-repeat center left;
-	padding-left: 40px; /* 32 px for the image (above), plus some breathing room */
-	height: 32px; /* provide enough vertical room for the image */
+	padding-inline-start: 40px; /* 32 px for the image (above), plus some breathing room */
+	block-size: 32px; /* provide enough vertical room for the image */
 	display: inline-block; /* allow the height property (above) to work */
 	/* TODO: re-evaluate this */
 	/* stylelint-disable-next-line declaration-property-unit-disallowed-list */
-	line-height: 32px; /* center the text vertically */
+	line-block-size: 32px; /* center the text vertically */
 }
 
 #config-live-log {
 	overflow: hidden;
-	min-width: 20em;
+	min-inline-size: 20em;
 }
 
 /* Hide empty live-log textarea */
@@ -231,7 +231,7 @@ body {
 	background-image: url( images/help-question.svg );
 	background-position: left center;
 	background-repeat: no-repeat;
-	margin-left: 2px;
+	margin-inline-start: 2px;
 	padding: 0 0 0 15px;
 	cursor: pointer;
 	font-size: 0.8em;
@@ -249,10 +249,10 @@ body {
 	display: block;
 	overflow: hidden;
 	/* stylelint-disable-next-line plugin/no-unsupported-browser-features */
-	min-width: min-content;
+	min-inline-size: min-content;
 	padding: 5px 8px 4px 8px;
 	border: 1px solid #5dc9f4;
-	margin-left: 20px;
+	margin-inline-start: 20px;
 }
 
 .config-help-field-checkbox:not( :checked ) ~ .config-help-field-data {
@@ -260,8 +260,8 @@ body {
 }
 
 #p-logo {
-	width: 10em;
-	height: 160px;
+	inline-size: 10em;
+	block-size: 160px;
 	margin: 0 0 0 0.6em;
 }
 
@@ -270,8 +270,8 @@ body {
 	background-position: center center;
 	background-repeat: no-repeat;
 	display: block;
-	width: 10em;
-	height: 160px;
+	inline-size: 10em;
+	block-size: 160px;
 	text-decoration: none;
 }
 
@@ -283,7 +283,7 @@ body {
 .mw-installer-box-left {
 	margin: 7px;
 	float: left;
-	width: 35px;
+	inline-size: 35px;
 }
 
 .mw-installer-box-right {
@@ -303,20 +303,20 @@ body {
 .logo-main {
 	display: flex;
 	align-items: center;
-	margin-left: 20px;
+	margin-inline-start: 20px;
 }
 
 .logo-icon {
-	width: 50px;
-	height: 50px;
-	margin-right: 10px;
+	inline-size: 50px;
+	block-size: 50px;
+	margin-inline-end: 10px;
 }
 
 .logo-tagline,
 .logo-wordmark {
 	display: block;
-	max-width: 130px;
-	max-height: 50px;
+	max-inline-size: 130px;
+	max-block-size: 50px;
 }
 
 .logo-tagline {
@@ -326,15 +326,15 @@ body {
 
 /* Logo preview (sidebar) */
 .logo-sidebar {
-	width: auto;
-	height: 160px;
-	margin-bottom: 1em;
-	max-width: 160px;
+	inline-size: auto;
+	block-size: 160px;
+	margin-block-end: 1em;
+	max-inline-size: 160px;
 }
 
 .logo-preview-area .sidebar {
-	width: 10em;
-	border-right: solid 1px #fe421e;
+	inline-size: 10em;
+	border-inline-end: solid 1px #fe421e;
 	text-align: center;
 	padding: 0 0.5em;
 }

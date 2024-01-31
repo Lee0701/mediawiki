@@ -23,9 +23,9 @@ body {
  */
 
 #main #menu {
-	border-left: 1px dotted #ccc;
+	border-inline-start: 1px dotted #ccc;
 	float: right;
-	width: 230px;
+	inline-size: 230px;
 	background: #fff;
 	margin: 0 0 10px 10px;
 }
@@ -39,21 +39,21 @@ td {
 	/* TODO: re-evaluate this */
 	/* stylelint-disable-next-line declaration-property-unit-disallowed-list */
 	font-size: 11px;
-	line-height: 140%;
+	line-block-size: 140%;
 }
 
 .header {
-	padding-left: 10px;
-	padding-top: 10px;
+	padding-inline-start: 10px;
+	padding-block-start: 10px;
 }
 
 .nav {
-	padding-left: 10px;
-	padding-bottom: 10px;
+	padding-inline-start: 10px;
+	padding-block-end: 10px;
 	/* TODO: re-evaluate this */
 	/* stylelint-disable-next-line declaration-property-unit-disallowed-list */
 	font-size: 11px;
-	margin-bottom: 16px;
+	margin-block-end: 16px;
 }
 
 #menu p {
@@ -63,5 +63,5 @@ td {
 }
 
 .dent {
-	margin-left: 64px;
+	margin-inline-start: 64px;
 }

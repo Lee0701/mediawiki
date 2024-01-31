@@ -6,5 +6,5 @@ a.feedlink {
 	background-position: center left;
 	background-repeat: no-repeat;
 	background-size: 12px 12px;
-	padding-left: 16px;
+	padding-inline-start: 16px;
 }

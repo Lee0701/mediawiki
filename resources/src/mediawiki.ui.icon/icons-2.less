@@ -35,7 +35,7 @@
 // Includes 2px mw-ui-button border
 @icon-padding-md-button: unit( ( @icon-touch-area-md - @icon-glyph-size-md - 2 ) / 2 / @font-size-browser, em );
 // At desktop resolution the icon touch area will shrink from @icon-touch-area-md to @icon-touch-area-sm
-@icon-padding-md-button--desktop: unit( ( @icon-touch-area-sm - @icon-glyph-size-md - 2 ) / 2 / @font-size-browser, em );
+@icon-padding-md-button--deskinset-block-start: unit( ( @icon-touch-area-sm - @icon-glyph-size-md - 2 ) / 2 / @font-size-browser, em );
 
 // Colors
 @icon-color: @colorGray5;
@@ -48,12 +48,12 @@
 	// Sizing properties
 	content: '';
 	display: block;
-	width: 100%;
-	height: 100%;
+	inline-size: 100%;
+	block-size: 100%;
 	// In case display: block is overridden and display gets set to `flex`
 	// because of inheritance T233521.
-	min-width: @size;
-	min-height: @size;
+	min-inline-size: @size;
+	min-block-size: @size;
 
 	// Background properties.
 	background-repeat: no-repeat;
@@ -81,17 +81,17 @@
 	// this is important for increasing the size via padding. Overrides `.view-border-box *`.
 	// stylelint-disable-next-line declaration-no-important
 	box-sizing: content-box !important;
-	width: @icon-size-md;
-	height: @icon-size-md;
+	inline-size: @icon-size-md;
+	block-size: @icon-size-md;
 
 	// Guarding against flex-box variability.
-	min-width: @icon-size-md;
-	min-height: @icon-size-md;
+	min-inline-size: @icon-size-md;
+	min-block-size: @icon-size-md;
 	flex-basis: @icon-size-md;
 
 	// alignment
 	vertical-align: middle;
-	line-height: 0;
+	line-block-size: 0;
 
 	// Overflow ellipsis.
 	.text-overflow( @visible: false );
@@ -116,7 +116,7 @@
 	// Use `not` selector to ensure we don't add space for machine readable markup. More info: T307233
 	& + span:not( :empty ) {
 		// Margin is added to separate accompanying text.
-		margin-left: @margin-icon-md-labelled;
+		margin-inline-start: @margin-icon-md-labelled;
 	}
 }
 
@@ -126,22 +126,22 @@
 * The flush-left/right classes are appropriate when that's unavailable.
 */
 .mw-ui-icon-flush-top {
-	margin-top: -@icon-padding-md;
+	margin-block-start: -@icon-padding-md;
 }
 
 .mw-ui-icon-flush-left {
-	margin-left: -@icon-padding-md;
+	margin-inline-start: -@icon-padding-md;
 
-	@media all and ( min-width: @width-breakpoint-desktop ) {
-		margin-left: -@icon-padding-md-button--desktop - @icon-border-width;
+	@media all and ( min-inline-size: @width-breakpoint-desktop ) {
+		margin-inline-start: -@icon-padding-md-button--desktop - @icon-border-width;
 	}
 }
 
 .mw-ui-icon-flush-right {
-	margin-right: -@icon-padding-md;
+	margin-inline-end: -@icon-padding-md;
 
-	@media all and ( min-width: @width-breakpoint-desktop ) {
-		margin-right: -@icon-padding-md-button--desktop - @icon-border-width;
+	@media all and ( min-inline-size: @width-breakpoint-desktop ) {
+		margin-inline-end: -@icon-padding-md-button--desktop - @icon-border-width;
 	}
 }
 
@@ -149,7 +149,7 @@
 	border-radius: @border-radius-base;
 	padding: @icon-padding-md;
 	// Override line-height applied by `.mw-ui-button`.
-	line-height: 0;
+	line-block-size: 0;
 	transition: background-color @transition-duration-base;
 
 	&.mw-ui-button {
@@ -165,7 +165,7 @@
 	}
 
 	// In desktop these icons shrink in size as touch area no longer important.
-	@media ( min-width: @width-breakpoint-desktop ) {
+	@media ( min-inline-size: @width-breakpoint-desktop ) {
 		&.mw-ui-button {
 			padding: @icon-padding-md-button--desktop;
 		}
@@ -173,12 +173,12 @@
 }
 
 .mw-ui-icon-small {
-	width: @icon-size-sm;
-	height: @icon-size-sm;
-	min-width: @icon-size-sm;
-	min-height: @icon-size-sm;
+	inline-size: @icon-size-sm;
+	block-size: @icon-size-sm;
+	min-inline-size: @icon-size-sm;
+	min-block-size: @icon-size-sm;
 	flex-basis: @icon-size-sm;
-	line-height: @icon-size-sm;
+	line-block-size: @icon-size-sm;
 
 	&:before {
 		.mixin-background-square( @icon-size-sm );
@@ -190,34 +190,34 @@
 }
 
 .mw-ui-icon-small.mw-ui-icon-flush-left {
-	margin-left: -@icon-padding-sm;
+	margin-inline-start: -@icon-padding-sm;
 }
 
 .mw-ui-icon-small.mw-ui-icon-flush-right {
-	margin-right: -@icon-padding-sm;
+	margin-inline-end: -@icon-padding-sm;
 }
 
 .mw-ui-icon-small.mw-ui-icon-before:before {
-	min-width: @icon-size-sm;
-	min-height: @icon-size-sm;
-	margin-right: @icon-padding-sm;
+	min-inline-size: @icon-size-sm;
+	min-block-size: @icon-size-sm;
+	margin-inline-end: @icon-padding-sm;
 }
 
 .mw-ui-icon-before {
-	width: auto;
-	max-width: 100%;
+	inline-size: auto;
+	max-inline-size: 100%;
 
 	&:before {
 		// sizing
 		display: inline-block;
 		/* stylelint-disable-next-line plugin/no-unsupported-browser-features */
 		font-size: initial;
-		width: auto;
-		min-width: @icon-size-md;
-		min-height: @icon-size-md;
+		inline-size: auto;
+		min-inline-size: @icon-size-md;
+		min-block-size: @icon-size-md;
 
 		// alignment. Margin is added to separate accompanying text.
-		margin-right: @margin-icon-md-labelled;
+		margin-inline-end: @margin-icon-md-labelled;
 		vertical-align: middle;
 	}
 
@@ -226,12 +226,12 @@
 	}
 }
 
-@media all and ( min-width: @width-breakpoint-desktop ) {
+@media all and ( min-inline-size: @width-breakpoint-desktop ) {
 	.mw-ui-icon-with-label-desktop {
 		// stylelint-disable-next-line declaration-no-important
 		color: @icon-color !important;
-		width: auto;
-		line-height: inherit;
+		inline-size: auto;
+		line-block-size: inherit;
 		flex-basis: auto;
 		// Special case outside of standard buttons styling due to surrounding
 		// interface elements, see T237019.
@@ -247,10 +247,10 @@
 		}
 
 		&:before {
-			width: auto;
+			inline-size: auto;
 			display: inline-block;
 			// Don't use `@icon-padding-md` as we are adjacent to text.
-			margin-right: @margin-icon-md-labelled;
+			margin-inline-end: @margin-icon-md-labelled;
 			// Seems to be more visually centered than `middle`.
 			vertical-align: text-bottom;
 		}

@@ -56,8 +56,8 @@
 
 .mw-allpages-chunk,
 .mw-prefixindex-list {
-	margin-top: 0;
-	margin-bottom: 0;
+	margin-block-start: 0;
+	margin-block-end: 0;
 }
 
 /* stylelint-disable-next-line selector-class-pattern */
@@ -79,11 +79,11 @@
 #mw-input-wpReason .oo-ui-dropdownInputWidget,
 #mw-input-wpReason .oo-ui-textInputWidget {
 	display: block;
-	max-width: 50em;
+	max-inline-size: 50em;
 }
 
 #mw-input-wpReason .oo-ui-textInputWidget {
-	margin-top: 0.5em;
+	margin-block-start: 0.5em;
 }
 
 /* Special:BlockList */
@@ -106,7 +106,7 @@
 
 /* Special:EditWatchlist */
 .mw-watchlistexpiry-msg {
-	margin-left: 0.3em;
+	margin-inline-start: 0.3em;
 	color: @color-base--subtle;
 }
 
@@ -141,7 +141,7 @@
 
 td.mw-revdel-checkbox,
 th.mw-revdel-checkbox {
-	padding-right: 10px;
+	padding-inline-end: 10px;
 	text-align: center;
 }
 
@@ -160,8 +160,8 @@ th.mw-revdel-checkbox {
 	columns: 16em 2;
 
 	ul {
-		margin-top: 0;
-		margin-bottom: 0;
+		margin-block-start: 0;
+		margin-block-end: 0;
 	}
 }
 

@@ -10,7 +10,7 @@
 
 .mw-special-Whatlinkshere {
 	.oo-ui-fieldsetLayout-group {
-		max-width: 50em;
+		max-inline-size: 50em;
 
 		.oo-ui-panelLayout-padded.oo-ui-panelLayout-framed {
 			border: 0;
@@ -29,20 +29,20 @@
 		align-items: end;
 		flex-wrap: wrap;
 		// To remove the left padding when its child checkbox is wrapped
-		margin-left: -@ooui-spacing-large;
+		margin-inline-start: -@ooui-spacing-large;
 	}
 
 	#mw-htmlform-whatlinkshere-ns > .mw-htmlform-field-HTMLSelectNamespace {
 		flex-grow: 1;
-		padding-left: @ooui-spacing-large;
+		padding-inline-start: @ooui-spacing-large;
 	}
 
 	#mw-htmlform-whatlinkshere-ns > .mw-htmlform-field-HTMLCheckField {
-		padding-left: @ooui-spacing-large;
+		padding-inline-start: @ooui-spacing-large;
 	}
 
 	#mw-htmlform-whatlinkshere-filter > .mw-htmlform-field-HTMLCheckField {
 		display: inline-block;
-		padding-right: @ooui-spacing-large;
+		padding-inline-end: @ooui-spacing-large;
 	}
 }

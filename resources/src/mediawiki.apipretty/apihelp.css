@@ -2,7 +2,7 @@
 
 .apihelp-header {
 	clear: both;
-	margin-bottom: 0.1em;
+	margin-block-end: 0.1em;
 }
 
 .apihelp-header.apihelp-module-name {
@@ -20,7 +20,7 @@ div.apihelp-linktrail {
 }
 
 .apihelp-block {
-	margin-top: 0.5em;
+	margin-block-start: 0.5em;
 }
 
 .apihelp-block-head {
@@ -55,12 +55,12 @@ div.apihelp-linktrail {
 
 .apihelp-help-urls ul {
 	list-style: none;
-	margin-left: 0;
+	margin-inline-start: 0;
 }
 
 .apihelp-parameters dt {
 	white-space: nowrap;
-	line-height: 1.5em;
+	line-block-size: 1.5em;
 }
 
 .apihelp-parameters dt:after {
@@ -68,16 +68,16 @@ div.apihelp-linktrail {
 }
 
 .apihelp-parameters dd {
-	line-height: 1.5em;
+	line-block-size: 1.5em;
 }
 
 .apihelp-parameters dd p:first-child {
-	margin-top: 0;
+	margin-block-start: 0;
 }
 
 .apihelp-examples dt {
 	font-weight: normal;
-	margin-top: 1em;
+	margin-block-start: 1em;
 }
 
 .api-main-links {
@@ -92,22 +92,22 @@ div.apihelp-linktrail {
 	content: ']';
 }
 
-@media ( min-width: 720px ) {
+@media ( min-inline-size: 720px ) {
 	.apihelp-flags {
 		float: right;
-		width: 20em;
+		inline-size: 20em;
 	}
 
 	.apihelp-parameters dl,
 	.apihelp-examples dl,
 	.apihelp-permissions dl {
-		margin-left: 2em;
+		margin-inline-start: 2em;
 	}
 
 	.apihelp-parameters dt {
 		float: left;
 		clear: left;
-		min-width: 10em;
+		min-inline-size: 10em;
 	}
 
 	.apihelp-parameters dd {
@@ -115,7 +115,7 @@ div.apihelp-linktrail {
 	}
 
 	.apihelp-parameters dd.info {
-		margin-left: 12em;
+		margin-inline-start: 12em;
 		text-indent: -2em;
 	}
 }

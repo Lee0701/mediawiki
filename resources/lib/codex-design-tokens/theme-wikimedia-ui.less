@@ -115,13 +115,13 @@
 @min-width-medium: 256px;
 @min-width-breakpoint-mobile: 320px; // A mobile device's minimum available screen width. Many older feature phones have screens smaller than this value.
 @min-width-breakpoint-tablet: 640px; // A tablet device's minimum available screen width. Note: the size chosen is eager to be re-evaluated with Web team and Product Analytics.
-@min-width-breakpoint-desktop: 1120px; // A desktop device's minimum available screen width.
+@min-width-breakpoint-deskinset-block-start: 1120px; // A desktop device's minimum available screen width.
 @min-width-breakpoint-desktop-wide: 1680px; // A wider desktop's minimum available screen width.
 @min-width-toggle-switch: 48px;
 @max-width-base: none;
 @max-width-breakpoint-mobile: calc( 640px - 1px ); // A mobile device's maximum available screen width. Many older feature phones have screens smaller than this value.
 @max-width-breakpoint-tablet: calc( 1120px - 1px ); // A tablet device's maximum available screen width. Note, the size chosen is eager to be re-evaluated with Web team and Product Analytics.
-@max-width-breakpoint-desktop: calc( 1680px - 1px ); // A desktop device's maximum available screen width.
+@max-width-breakpoint-deskinset-block-start: calc( 1680px - 1px ); // A desktop device's maximum available screen width.
 @max-width-button: 28em; // Note, that this is a slight amendment from WikimediaUI Base from `28.75em` = `460px` to `448px` – `dimension.2800`
 @position-offset-border-width-base: -1px;
 @position-offset-input-radio--focus: -0.25em;
@@ -181,7 +181,7 @@
 @box-shadow-inset-medium: inset 0 0 0 2px;
 @box-shadow-inset-medium-vertical: inset 0 -2px 0 0;
 @box-shadow-outset-small: 0 0 0 1px;
-@box-shadow-outset-small-top: 0 -1px 0 0;
+@box-shadow-outset-small-inset-block-start: 0 -1px 0 0;
 @box-shadow-outset-small-start: -1px 0 0 0;
 @box-shadow-color-base: #000;
 @box-shadow-color-progressive--active: #2a4b8d;
@@ -339,7 +339,7 @@
 // Warning: the following token name is deprecated (Legacy breakpoint. Use `min-width`/`max-width` breakpoint token instead. A tablet device's screen width.)
 @width-breakpoint-tablet: 720px;
 // Warning: the following token name is deprecated (Legacy breakpoint. Use `min-width`/`max-width` breakpoint token instead. A desktop device's screen width.)
-@width-breakpoint-desktop: 1000px;
+@width-breakpoint-deskinset-block-start: 1000px;
 // Warning: the following token name is deprecated (Legacy breakpoint. Use `min-width`/`max-width` breakpoint token instead. A wider desktop's screen width.)
 @width-breakpoint-desktop-wide: 1200px;
 // Warning: the following token name is deprecated (Legacy breakpoint. Use `min-width`/`max-width` breakpoint token instead. An extra wide desktop's screen width.)

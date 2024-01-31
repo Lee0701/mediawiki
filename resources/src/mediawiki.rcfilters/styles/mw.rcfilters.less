@@ -2,9 +2,9 @@
 @import 'mw.rcfilters.mixins.less';
 
 @rcfilters-spinner-size: 12px;
-@rcfilters-head-min-height: 210px;
-@rcfilters-head-margin-bottom: 20px;
-@rcfilters-wl-head-min-height: 295px;
+@rcfilters-head-min-block-size: 210px;
+@rcfilters-head-margin-block-end: 20px;
+@rcfilters-wl-head-min-block-size: 295px;
 @rcfilters-head-min-height-collapsed: 130px;
 @rcfilters-wl-head-min-height-collapsed: 220px;
 
@@ -17,44 +17,44 @@
 
 	// Reserve space for the UI while it loads
 	.mw-rcfilters-head {
-		min-height: @rcfilters-head-min-height;
-		margin-bottom: @rcfilters-head-margin-bottom;
+		min-block-size: @rcfilters-head-min-height;
+		margin-block-end: @rcfilters-head-margin-bottom;
 	}
 
 	// On the watchlist, reserve a bit more
 	.mw-special-Watchlist .mw-rcfilters-head {
-		min-height: @rcfilters-wl-head-min-height;
+		min-block-size: @rcfilters-wl-head-min-height;
 	}
 
 	.mw-rcfilters-collapsed {
 		.mw-rcfilters-head {
-			min-height: @rcfilters-head-min-height-collapsed;
+			min-block-size: @rcfilters-head-min-height-collapsed;
 		}
 
 		// On the watchlist, reserve a bit more
 		&.mw-special-Watchlist .mw-rcfilters-head {
-			min-height: @rcfilters-wl-head-min-height-collapsed;
+			min-block-size: @rcfilters-wl-head-min-height-collapsed;
 		}
 	}
 
 	.mw-recentchanges-toplinks {
-		padding-left: 0.5em;
+		padding-inline-start: 0.5em;
 
 		&:not( .mw-recentchanges-toplinks-collapsed ) {
-			margin-top: -1px; // Make up for `border` to prevent link movement
-			margin-left: -1px;
-			margin-bottom: 0.5em;
+			margin-block-start: -1px; // Make up for `border` to prevent link movement
+			margin-inline-start: -1px;
+			margin-block-end: 0.5em;
 			border: 1px solid @colorGray12; // Same as the legend
 			padding: 0 0.5em 0.5em 0.5em;
 		}
 
 		/* stylelint-disable declaration-no-important */
 		.oo-ui-buttonElement > .oo-ui-buttonElement-button {
-			padding-right: 1.2em !important;
+			padding-inline-end: 1.2em !important;
 
 			> .oo-ui-indicatorElement-indicator {
-				right: 0 !important;
-				width: 0.9375em !important;
+				inset-inline-end: 0 !important;
+				inline-size: 0.9375em !important;
 			}
 		}
 		/* stylelint-enable declaration-no-important */
@@ -110,9 +110,9 @@
 	.mw-rcfilters-spinner {
 		display: none;
 		position: absolute;
-		left: 50%;
+		inset-inline-start: 50%;
 		// Make sure the middle of the spinner is centered, rather than its left edge
-		margin-left: -3 * @rcfilters-spinner-size / 2;
+		margin-inline-start: -3 * @rcfilters-spinner-size / 2;
 		white-space: nowrap;
 
 		& .mw-rcfilters-spinner-bounce,
@@ -122,19 +122,19 @@
 			background-color: @color-primary;
 			display: block;
 			float: left;
-			width: @rcfilters-spinner-size;
-			height: @rcfilters-spinner-size;
+			inline-size: @rcfilters-spinner-size;
+			block-size: @rcfilters-spinner-size;
 			border-radius: 100%;
 			animation: rcfiltersBouncedelay 1600ms ease-in-out -160ms infinite both;
 		}
 
 		&:before {
-			margin-right: 4px;
+			margin-inline-end: 4px;
 			animation-delay: -330ms;
 		}
 
 		&:after {
-			margin-left: 4px;
+			margin-inline-start: 4px;
 			animation-delay: 0s;
 		}
 	}
@@ -142,13 +142,13 @@
 	body:not( .mw-rcfilters-ui-initialized ) .mw-rcfilters-spinner {
 		display: block;
 		// When initializing, display the spinner on top of the area where the UI will appear
-		margin-top: -( @rcfilters-head-min-height + @rcfilters-head-margin-bottom ) / 1.5;
+		margin-block-start: -( @rcfilters-head-min-height + @rcfilters-head-margin-bottom ) / 1.5;
 	}
 
 	body.mw-rcfilters-ui-loading .mw-rcfilters-spinner {
 		display: block;
 		// When loading new results, display the spinner on top of the results area
-		margin-top: -( @rcfilters-head-min-height + @rcfilters-head-margin-bottom ) / 8;
+		margin-block-start: -( @rcfilters-head-min-height + @rcfilters-head-margin-bottom ) / 8;
 	}
 
 	.mw-watchlist-owner,
@@ -160,8 +160,8 @@
 	// Why does rcfilters have a copy of this?
 	// TODO: Remove per T195256.
 	#jump-to-nav {
-		margin-top: -0.5em;
-		margin-bottom: 0.5em;
+		margin-block-start: -0.5em;
+		margin-block-end: 0.5em;
 	}
 
 	// Make the watchlist-details message display while loading, but make it not take up any
@@ -172,7 +172,7 @@
 		// The 20em should match the min-width we are setting up
 		// for the .mw-rcfilters-ui-watchlistTopSectionWidget-editWatchlistButton
 		// in mw.rcfilters.ui.WatchlistTopSectionWidget.less
-		width: ~'calc( 100% - 20em )';
+		inline-size: ~'calc( 100% - 20em )';
 	}
 }
 
@@ -182,12 +182,12 @@
 
 // on smaller screen, set .watchlistDetail to full width
 // so that the spinner doesn't appear beside it. T225127#5518870
-@media screen and ( max-width: @width-breakpoint-tablet ) {
+@media screen and ( max-inline-size: @width-breakpoint-tablet ) {
 	.client-js {
 		/* stylelint-disable-next-line selector-class-pattern */
 		.watchlistDetails {
 			float: none;
-			width: auto;
+			inline-size: auto;
 		}
 	}
 }

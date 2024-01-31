@@ -35,7 +35,7 @@ div.thumbinner {
 .magnify {
 	/* Default styles when there's no .mw-content-ltr or .mw-content-rtl, overridden below */
 	float: right;
-	margin-left: 3px;
+	margin-inline-start: 3px;
 
 	a {
 		display: block;
@@ -44,8 +44,8 @@ div.thumbinner {
 		white-space: nowrap;
 		overflow: hidden;
 		/* …and replace it with the image */
-		width: 15px;
-		height: 11px;
+		inline-size: 15px;
+		block-size: 11px;
 		/* Default styles when there's no .mw-content-ltr or .mw-content-rtl, overridden below */
 		background-image: @background-image-magnify-ltr;
 		/* Don't annoy people who copy-paste everything too much */
@@ -70,8 +70,8 @@ div.thumbinner {
 
 /* @noflip */
 .mw-content-ltr .magnify {
-	margin-left: 3px;
-	margin-right: 0;
+	margin-inline-start: 3px;
+	margin-inline-end: 0;
 	float: right;
 }
 
@@ -82,8 +82,8 @@ div.thumbinner {
 
 /* @noflip */
 .mw-content-rtl .magnify {
-	margin-left: 0;
-	margin-right: 3px;
+	margin-inline-start: 0;
+	margin-inline-end: 3px;
 	float: left;
 }
 

@@ -21,7 +21,7 @@
 	color: @color-base--emphasized;
 	box-sizing: border-box;
 	display: block;
-	width: 100%;
+	inline-size: 100%;
 	border: @border-base;
 	border-radius: @border-radius-base;
 	padding: 6px 8px;
@@ -29,7 +29,7 @@
 	box-shadow: @box-shadow-base;
 	font-family: inherit;
 	font-size: inherit;
-	line-height: 1.28571429em;
+	line-block-size: 1.28571429em;
 	vertical-align: middle;
 
 	// Normalize & style placeholder text, see T139034
@@ -89,7 +89,7 @@
 }
 
 textarea.mw-ui-input {
-	min-height: 8em;
+	min-block-size: 8em;
 }
 
 // mw-ui-input-inline
@@ -101,10 +101,10 @@ textarea.mw-ui-input {
 // <button class="mw-ui-button mw-ui-progressive">Submit</button>
 .mw-ui-input-inline {
 	display: inline-block;
-	width: auto;
+	inline-size: auto;
 	// Make sure we limit `width` to parent element because
-	// in case of text `input` fields, `width: auto;` equals `size` attribute.
-	max-width: 100%;
+	// in case of text `input` fields, `inline-size: auto;` equals `size` attribute.
+	max-inline-size: 100%;
 }
 
 // mw-ui-input-large
@@ -119,12 +119,12 @@ textarea.mw-ui-input {
 // <input value="input" class="mw-ui-input mw-ui-input-large" value="input" placeholder="Enter subject">
 // <textarea class="mw-ui-input mw-ui-input-large" placeholder="Provide additional details"></textarea>
 .mw-ui-input-large {
-	margin-top: 0;
-	margin-bottom: 0;
+	margin-block-start: 0;
+	margin-block-end: 0;
 
 	// When two large inputs are together, we make them flush by hiding one of the borders
 	& + .mw-ui-input-large {
-		margin-top: -1px;
+		margin-block-start: -1px;
 	}
 	// When focusing, make the input relative to raise it above any attached inputs to unhide its borders
 	&:focus {
@@ -136,5 +136,5 @@ input.mw-ui-input-large {
 	padding: 8px;
 	font-size: 1.75em;
 	font-weight: bold;
-	line-height: 1.25em;
+	line-block-size: 1.25em;
 }

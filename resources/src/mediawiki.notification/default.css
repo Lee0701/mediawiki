@@ -1,27 +1,27 @@
 .mw-notification-area-overlay {
 	position: absolute;
-	top: 0;
-	right: 0;
-	height: 100%;
-	width: 100%;
+	inset-block-start: 0;
+	inset-inline-end: 0;
+	block-size: 100%;
+	inline-size: 100%;
 	/* Avoid horizontal scrollbar on fade in and on fade out */
 	overflow: hidden;
 	pointer-events: none;
 }
 
 .mw-notification-area {
-	top: 0;
-	right: 0;
+	inset-block-start: 0;
+	inset-inline-end: 0;
 	/* Padding on all sides so drop shadows aren't cut by overflow: hidden */
 	padding: 1em;
-	width: 20em;
-	line-height: 1.35;
+	inline-size: 20em;
+	line-block-size: 1.35;
 	z-index: 10000;
 }
 
 .mw-notification {
 	padding: 0.75em 1.5em;
-	margin-bottom: 0.5em;
+	margin-block-end: 0.5em;
 	border: solid 1px #ddd;
 	background-color: #fff;
 	color: #000;
