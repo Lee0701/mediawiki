@@ -11,7 +11,7 @@
 
 .mw-widget-mediaSearchWidget > .oo-ui-searchWidget-results {
 	display: block;
-	line-block-size: 1em;
+	line-height: 1em;
 }
 
 .mw-widget-mediaSearchWidget-noResults {
@@ -19,7 +19,10 @@
 }
 
 .mw-widget-mediaSearchWidget-recentUploads {
-	margin: 0.5em 0 1em 0;
+	margin-block-start: 0.5em;
+	margin-inline-end: 0;
+	margin-block-end: 1em;
+	margin-inline-start: 0;
 	font-weight: bold;
 }
 

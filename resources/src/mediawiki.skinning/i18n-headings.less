@@ -30,7 +30,7 @@
 :lang( ta ),
 :lang( te ) {
 	h1& {
-		line-block-size: 1.6em !important; /* stylelint-disable-line declaration-no-important */
+		line-height: 1.6em !important; /* stylelint-disable-line declaration-no-important */
 	}
 
 	h2&,
@@ -38,12 +38,12 @@
 	h4&,
 	h5&,
 	h6& {
-		line-block-size: 1.4em;
+		line-height: 1.4em;
 	}
 }
 
 // Increase `line-height` for Thai top vowel + top tone combination on `h2`,
 // for example on `ตั้`. See T285972.
 h2:lang( th ) {
-	line-block-size: 1.6;
+	line-height: 1.6;
 }

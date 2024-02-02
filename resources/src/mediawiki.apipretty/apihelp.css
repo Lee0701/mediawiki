@@ -60,15 +60,15 @@ div.apihelp-linktrail {
 
 .apihelp-parameters dt {
 	white-space: nowrap;
-	line-block-size: 1.5em;
+	line-height: 1.5em;
 }
 
 .apihelp-parameters dt:after {
-	content: ':\A0';
+	content: ';
 }
 
 .apihelp-parameters dd {
-	line-block-size: 1.5em;
+	line-height: 1.5em;
 }
 
 .apihelp-parameters dd p:first-child {
@@ -111,7 +111,10 @@ div.apihelp-linktrail {
 	}
 
 	.apihelp-parameters dd {
-		margin: 0 0 0.5em 10em;
+		margin-block-start: 0;
+		margin-inline-end: 0;
+		margin-block-end: 0.5em;
+		margin-inline-start: 10em;
 	}
 
 	.apihelp-parameters dd.info {

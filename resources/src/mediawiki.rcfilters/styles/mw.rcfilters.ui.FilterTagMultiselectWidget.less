@@ -9,7 +9,7 @@
 	.oo-ui-tagMultiselectWidget-input input {
 		// Make sure this uses the interface direction, not the content direction
 		direction: ltr;
-		border-end-end-radius: 0;
+		border-undefined-radius: 0;
 		block-size: 2.5em;
 	}
 
@@ -19,8 +19,11 @@
 			border: @border-base;
 			border-block-end: 0;
 			border-radius: @border-radius-base @border-radius-base 0 0;
-			padding: 0 0.6em 0.6em 0.6em;
-			line-block-size: normal;
+			padding-block-start: 0;
+			padding-inline-end: 0.6em;
+			padding-block-end: 0.6em;
+			padding-inline-start: 0.6em;
+			line-height: normal;
 		}
 
 		// Hamburger menu for dropdown.
@@ -79,13 +82,15 @@
 			justify-content: space-between;
 
 			&-title {
-				padding: 0.6em 0; // Same top padding as the handle
+				padding-block: 0.6em; // Same top padding as the handle
+				padding-inline: 0; // Same top padding as the handle
 				flex: 0 0 auto;
 			}
 
 			&-queryName {
 				flex: 1 1 auto;
-				padding: 0.6em 0; // Same top padding as the handle
+				padding-block: 0.6em; // Same top padding as the handle
+				padding-inline: 0; // Same top padding as the handle
 				white-space: nowrap;
 				min-inline-size: 0; // This has to be here to enable the text truncation
 				overflow: hidden;

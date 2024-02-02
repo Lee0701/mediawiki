@@ -11,7 +11,10 @@
 	background-color: #fff;
 	color: #000;
 	max-inline-size: 15em;
-	padding: 5px 8px 4px 8px;
+	padding-block-start: 5px;
+	padding-inline-end: 8px;
+	padding-block-end: 4px;
+	padding-inline-start: 8px;
 	border: 1px solid #a2a9b1;
 	border-radius: 2px;
 }

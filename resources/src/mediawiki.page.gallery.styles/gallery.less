@@ -28,7 +28,8 @@ li.gallerybox {
 
 		img {
 			display: block;
-			margin: 0 auto;
+			margin-block: 0;
+			margin-inline: auto;
 		}
 	}
 }
@@ -36,7 +37,8 @@ li.gallerybox {
 div.gallerytext {
 	overflow: hidden;
 	font-size: 94%;
-	padding: 2px 4px;
+	padding-block: 2px;
+	padding-inline: 4px;
 	word-wrap: break-word;
 }
 
@@ -74,7 +76,8 @@ ul.mw-gallery-packed-hover {
 		border: 0;
 
 		img {
-			margin: 0 auto;
+			margin-block: 0;
+			margin-inline: auto;
 		}
 	}
 }
@@ -97,7 +100,8 @@ ul.mw-gallery-packed-hover li.gallerybox.mw-gallery-focused div.gallerytextwrapp
 	position: absolute;
 	background: #fff;
 	background: rgba( 255, 255, 255, 0.8 );
-	padding: 5px 10px;
+	padding-block: 5px;
+	padding-inline: 10px;
 	inset-block-end: 0;
 	inset-inline-start: 0; /* Needed for IE */
 	block-size: auto;
@@ -129,7 +133,8 @@ ul.mw-gallery-packed-hover li.gallerybox.mw-gallery-focused div.gallerytextwrapp
 // TODO: Galleries should not use `<ul>` (T38755)
 ul.gallery.gallery.gallery.mw-gallery-slideshow {
 	display: block;
-	margin: 4em 0;
+	margin-block: 4em;
+	margin-inline: 0;
 }
 
 .mw-gallery-slideshow {
@@ -150,11 +155,13 @@ ul.gallery.gallery.gallery.mw-gallery-slideshow {
 
 	.mw-gallery-slideshow-buttons {
 		opacity: 0.5;
-		padding: 1.3em 0;
+		padding-block: 1.3em;
+		padding-inline: 0;
 		white-space: nowrap;
 
 		.oo-ui-buttonElement {
-			margin: 0 2em;
+			margin-block: 0;
+			margin-inline: 2em;
 
 			&:first-child {
 				margin-inline-start: 0;

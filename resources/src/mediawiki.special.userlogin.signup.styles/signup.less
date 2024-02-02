@@ -16,7 +16,7 @@
 		 * column appears to the side. */
 		margin-inline-end: 100px;
 		/* Override `.mw-body-content` to ensure useful, readable paragraphs */
-		line-block-size: 1.4;
+		line-height: 1.4;
 	}
 }
 
@@ -58,7 +58,7 @@
 	font-family: 'Linux Libertine', 'Georgia', 'Times', serif;
 	font-weight: normal;
 	font-size: 2.2em;
-	line-block-size: 1.2;
+	line-height: 1.2;
 	text-align: center;
 }
 
@@ -69,7 +69,10 @@
 	color: #54595d;
 	margin-block-start: 1em;
 	/* 80px wide icon plus "margin" */
-	padding: 0 0 0 95px;
+	padding-block-start: 0;
+	padding-inline-end: 0;
+	padding-block-end: 0;
+	padding-inline-start: 95px;
 	/* Matches max icon height, ensures icon emblem is visible */
 	min-block-size: 75px;
 	text-align: center;

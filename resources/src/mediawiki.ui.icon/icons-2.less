@@ -91,7 +91,7 @@
 
 	// alignment
 	vertical-align: middle;
-	line-block-size: 0;
+	line-height: 0;
 
 	// Overflow ellipsis.
 	.text-overflow( @visible: false );
@@ -149,7 +149,7 @@
 	border-radius: @border-radius-base;
 	padding: @icon-padding-md;
 	// Override line-height applied by `.mw-ui-button`.
-	line-block-size: 0;
+	line-height: 0;
 	transition: background-color @transition-duration-base;
 
 	&.mw-ui-button {
@@ -178,7 +178,7 @@
 	min-inline-size: @icon-size-sm;
 	min-block-size: @icon-size-sm;
 	flex-basis: @icon-size-sm;
-	line-block-size: @icon-size-sm;
+	line-height: @icon-size-sm;
 
 	&:before {
 		.mixin-background-square( @icon-size-sm );
@@ -231,7 +231,7 @@
 		// stylelint-disable-next-line declaration-no-important
 		color: @icon-color !important;
 		inline-size: auto;
-		line-block-size: inherit;
+		line-height: inherit;
 		flex-basis: auto;
 		// Special case outside of standard buttons styling due to surrounding
 		// interface elements, see T237019.

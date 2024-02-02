@@ -12,14 +12,14 @@
 @ooui-spacing-radio-label: 26 / @ooui-font-size-browser / @ooui-font-size-base; // Equals `1.85714286em`≈`26px`.
 
 .mw-htmlform-ooui {
-	line-block-size: 1.4; // Override MediaWiki's default of `1.6`
+	line-height: 1.4; // Override MediaWiki's default of `1.6`
 
 	.oo-ui-fieldsetLayout-header {
 		font-size: 100%; // Override MediaWiki's generic `legend` styling
 	}
 
 	.oo-ui-fieldLayout.oo-ui-labelElement > .oo-ui-fieldLayout-body > .oo-ui-fieldLayout-header {
-		line-block-size: 16 / @ooui-font-size-browser / @ooui-font-size-base;
+		line-height: 16 / @ooui-font-size-browser / @ooui-font-size-base;
 	}
 
 	// Default OOUI styles produce a larger margin here
@@ -35,7 +35,8 @@
 		}
 
 		td {
-			padding: @ooui-spacing-small @ooui-spacing-medium;
+			padding-block: @ooui-spacing-small;
+			padding-inline: @ooui-spacing-medium;
 			text-align: center;
 			transition: background-color 250ms;
 

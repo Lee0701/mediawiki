@@ -112,7 +112,7 @@
 .oo-ui-messageDialog-title,
 .oo-ui-messageDialog-message {
   display: block;
-  line-block-size: 1.42857143em;
+  line-height: 1.42857143em;
   text-align: center;
 }
 .oo-ui-messageDialog-title {
@@ -141,7 +141,7 @@
   padding-block-end: 0;
 }
 .oo-ui-messageDialog-actions .oo-ui-actionWidget.oo-ui-labelElement .oo-ui-labelElement-label {
-  line-block-size: 2.85714286em;
+  line-height: 2.85714286em;
   text-align: center;
 }
 .oo-ui-messageDialog-actions .oo-ui-actionWidget.oo-ui-widget-enabled.oo-ui-flaggedElement-progressive .oo-ui-buttonElement-button:active {
@@ -236,7 +236,7 @@
 .oo-ui-processDialog-title {
   font-size: 1.1em;
   font-weight: bold;
-  line-block-size: 2.72727273em;
+  line-height: 2.72727273em;
 }
 .oo-ui-processDialog .oo-ui-actionWidget > .oo-ui-buttonElement-button {
   border-radius: 0;
@@ -266,7 +266,8 @@
   margin-inline-start: 0;
 }
 .oo-ui-processDialog .oo-ui-actionWidget.oo-ui-labelElement > .oo-ui-buttonElement-button {
-  padding: 10px 12px;
+  padding-block: 10px;
+  padding-inline: 12px;
 }
 .oo-ui-processDialog .oo-ui-actionWidget.oo-ui-labelElement.oo-ui-iconElement > .oo-ui-buttonElement-button {
   padding-inline-start: 2.42857143em;
@@ -311,7 +312,10 @@
 }
 .oo-ui-processDialog-errors {
   background-color: rgba(255, 255, 255, 0.9);
-  padding: 3em 3em 0 3em;
+  padding-block-start: 3em;
+  padding-inline-end: 3em;
+  padding-block-end: 0;
+  padding-inline-start: 3em;
 }
 .oo-ui-processDialog-errors-title {
   font-size: 1.5em;
@@ -320,13 +324,16 @@
   text-align: center;
 }
 .oo-ui-processDialog-errors > .oo-ui-messageWidget {
-  margin: 1em 0 0;
+  margin-block-start: 1em;
+  margin-inline: 0;
+  margin-block-end: 0;
 }
 .oo-ui-processDialog-errors-actions {
   text-align: center;
 }
 .oo-ui-processDialog-errors-actions > .oo-ui-buttonWidget {
-  margin: 2em 1em;
+  margin-block: 2em;
+  margin-inline: 1em;
 }
 .oo-ui-processDialog.oo-ui-isMobile .oo-ui-processDialog-content .oo-ui-window-head,
 .oo-ui-processDialog.oo-ui-isMobile .oo-ui-processDialog-navigation,
@@ -338,7 +345,7 @@
   text-align: left;
 }
 .oo-ui-processDialog.oo-ui-isMobile .oo-ui-processDialog-title {
-  line-block-size: 2.85714286em;
+  line-height: 2.85714286em;
 }
 .oo-ui-processDialog.oo-ui-isMobile .oo-ui-processDialog-content .oo-ui-window-body {
   inset-block-start: 3.14285714em;
@@ -349,8 +356,9 @@
 }
 .oo-ui-processDialog.oo-ui-isMobile .oo-ui-actionWidget.oo-ui-labelElement > .oo-ui-buttonElement-button {
   min-block-size: 3.14285714em;
-  line-block-size: 3.14285714em;
-  padding: 0 12px;
+  line-height: 3.14285714em;
+  padding-block: 0;
+  padding-inline: 12px;
 }
 .oo-ui-processDialog.oo-ui-isMobile .oo-ui-actionWidget.oo-ui-labelElement.oo-ui-iconElement > .oo-ui-buttonElement-button {
   padding-inline-start: 2.42857143em;

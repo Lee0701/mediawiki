@@ -27,7 +27,10 @@ body {
 	float: right;
 	inline-size: 230px;
 	background: #fff;
-	margin: 0 0 10px 10px;
+	margin-block-start: 0;
+	margin-inline-end: 0;
+	margin-block-end: 10px;
+	margin-inline-start: 10px;
 }
 
 h1,
@@ -35,11 +38,14 @@ h3,
 p,
 pre,
 td {
-	margin: 0 20px 20px 20px;
+	margin-block-start: 0;
+	margin-inline-end: 20px;
+	margin-block-end: 20px;
+	margin-inline-start: 20px;
 	/* TODO: re-evaluate this */
 	/* stylelint-disable-next-line declaration-property-unit-disallowed-list */
 	font-size: 11px;
-	line-block-size: 140%;
+	line-height: 140%;
 }
 
 .header {

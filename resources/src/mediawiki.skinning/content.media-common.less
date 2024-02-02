@@ -6,7 +6,7 @@
 
 figure[ typeof~='mw:File' ],
 figure[ typeof~='mw:File/Frameless' ] {
-	margin: 0;  // Maybe belongs in element.css for figure
+	margin: 0; // Maybe belongs in element.css for figure
 
 	> a {
 		// The addition of the class is needed for higher specificity
@@ -41,7 +41,8 @@ figure[ typeof~='mw:File/Frameless' ] {
 
 	&.mw-halign-center {
 		/* Matches *.center * in element.css */
-		margin: 0 auto;
+		margin-block: 0;
+		margin-inline: auto;
 		display: table;
 		border-collapse: collapse;
 		clear: none;
@@ -56,12 +57,12 @@ figure[ typeof~='mw:File/Frameless' ] {
 
 figure[ typeof~='mw:File/Thumb' ],
 figure[ typeof~='mw:File/Frame' ] {
-	margin: 0;  // Maybe belongs in element.css for figure
+	margin: 0; // Maybe belongs in element.css for figure
 	margin-block-end: @margin-bottom-thumb;
 	display: table;
 	text-align: center;
 	border-collapse: collapse;
-	line-block-size: 0;
+	line-height: 0;
 
 	> a {
 		// The addition of the class is needed for higher specificity
@@ -124,7 +125,10 @@ figure[ typeof~='mw:File/Frame' ] {
 		/* Override the default margin from mw-content-xxx above
 		 * And, matches *.center * in element.css
 		 */
-		margin: 0 auto @margin-bottom-thumb auto;
+		margin-block-start: 0;
+		margin-inline-end: auto;
+		margin-block-end: @margin-bottom-thumb;
+		margin-inline-start: auto;
 		clear: none;
 		float: none;
 	}
@@ -140,9 +144,10 @@ figure[ typeof~='mw:File/Frame' ] {
 		 */
 		> span.mw-broken-media {
 			display: inline-block;
-			line-block-size: 1.6em;
+			line-height: 1.6em;
 			/* The extra horizontal margin here is to make up for the lack of a border */
-			margin: 3px 4px;
+			margin-block: 3px;
+			margin-inline: 4px;
 			/* This is hardcoded in Linker::makeThumbLink2 for broken media */
 			inline-size: 180px;
 			/* Styles the text of broken media */
@@ -153,7 +158,7 @@ figure[ typeof~='mw:File/Frame' ] {
 	> figcaption {
 		display: table-caption;
 		caption-side: bottom;
-		line-block-size: @line-height-thumbcaption;
+		line-height: @line-height-thumbcaption;
 
 		/**
 		 * The "break-word" value is deprecated, however, it's well supported
@@ -188,7 +193,10 @@ figure[ typeof~='mw:File/Frame' ] {
 		}
 
 		/* taken from .thumbcaption, plus .thumbinner */
-		padding: 0 6px 6px 6px;
+		padding-block-start: 0;
+		padding-inline-end: 6px;
+		padding-block-end: 6px;
+		padding-inline-start: 6px;
 	}
 }
 

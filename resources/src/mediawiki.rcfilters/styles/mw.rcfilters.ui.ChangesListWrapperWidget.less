@@ -19,18 +19,23 @@
 
 	&-newChanges {
 		min-block-size: 34px;
-		margin: 8px 0 0 0;
+		margin-block-start: 8px;
+		margin-inline-end: 0;
+		margin-block-end: 0;
+		margin-inline-start: 0;
 		text-align: center;
 	}
 
 	&-previousChangesIndicator {
-		margin: 10px 0;
+		margin-block: 10px;
+		margin-inline: 0;
 		border-block-start: 2px solid @colorGray12;
 		animation: 1s ease fadeBlue;
 	}
 
 	&-results {
-		margin: 5em auto;
+		margin-block: 5em;
+		margin-inline: auto;
 
 		&-noresult,
 		&-conflict {
@@ -86,7 +91,10 @@
 
 .mw-rcfilters-ui-highlights {
 	display: none;
-	padding: 0 @margin-circle 0 0;
+	padding-block-start: 0;
+	padding-inline-end: @margin-circle;
+	padding-block-end: 0;
+	padding-inline-start: 0;
 	// The width is 5 circles times their diameter + individual margin
 	// and then plus the general margin
 	inline-size: ~'calc( ( @{size-circle-result} + @{margin-circle-result} ) * 5 )';

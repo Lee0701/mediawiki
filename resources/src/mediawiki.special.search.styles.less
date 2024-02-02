@@ -184,9 +184,14 @@
 #mw-searchoptions {
 	/* Support: Firefox, needs `clear: both` on `fieldset` when zoom level > 100%, see T176499 */
 	clear: both;
-	padding: 0.5em 0.75em 0.75em 0.75em;
+	padding-block-start: 0.5em;
+	padding-inline-end: 0.75em;
+	padding-block-end: 0.75em;
+	padding-inline-start: 0.75em;
 	background-color: @colorGray15;
-	margin: -1px 0 0;
+	margin-block-start: -1px;
+	margin-inline: 0;
+	margin-block-end: 0;
 	border: 1px solid @colorGray12;
 	border-radius: 0 0 2px 2px;
 
@@ -248,7 +253,10 @@
 .mw-search-interwiki-project {
 	font-size: 97%;
 	text-align: left;
-	padding: 0.15em 0.15em 0.2em 0.2em;
+	padding-block-start: 0.15em;
+	padding-inline-end: 0.15em;
+	padding-block-end: 0.2em;
+	padding-inline-start: 0.2em;
 	background-color: @colorGray14;
 	border-block-start: 1px solid @colorGray12;
 }

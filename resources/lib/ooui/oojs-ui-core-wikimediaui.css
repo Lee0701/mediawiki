@@ -14,7 +14,7 @@
 
 .oo-ui-buttonElement {
   display: inline-block;
-  line-block-size: normal;
+  line-height: normal;
   vertical-align: middle;
 }
 .oo-ui-buttonElement > .oo-ui-buttonElement-button {
@@ -58,11 +58,11 @@
   -webkit-appearance: none;
 }
 .oo-ui-buttonElement.oo-ui-labelElement > .oo-ui-buttonElement-button {
-  line-block-size: 1;
+  line-height: 1;
 }
 .oo-ui-buttonElement.oo-ui-labelElement > input.oo-ui-buttonElement-button,
 .oo-ui-buttonElement.oo-ui-labelElement > .oo-ui-buttonElement-button > .oo-ui-labelElement-label {
-  line-block-size: 1.42857143em;
+  line-height: 1.42857143em;
 }
 .oo-ui-buttonElement.oo-ui-labelElement.oo-ui-indicatorElement > .oo-ui-buttonElement-button {
   padding-inline-end: 2.14285714em;
@@ -118,7 +118,8 @@
   border-color: transparent;
   border-style: solid;
   border-width: 1px;
-  padding: 5px 6px;
+  padding-block: 5px;
+  padding-inline: 6px;
 }
 .oo-ui-buttonElement-frameless.oo-ui-labelElement.oo-ui-iconElement > .oo-ui-buttonElement-button {
   padding-inline-start: 2.14285714em;
@@ -395,7 +396,7 @@
   overflow: hidden;
 }
 .oo-ui-labelElement .oo-ui-labelElement-label {
-  line-block-size: 1.42857143em;
+  line-height: 1.42857143em;
 }
 .oo-ui-labelElement .oo-ui-labelElement-label-highlight {
   font-weight: bold;
@@ -573,7 +574,8 @@
 .oo-ui-fieldLayout-messages {
   box-sizing: border-box;
   max-inline-size: 50em;
-  padding: 4px 0;
+  padding-block: 4px;
+  padding-inline: 0;
 }
 .oo-ui-fieldLayout-messages > .oo-ui-messageWidget {
   margin-inline-start: 12px;
@@ -632,7 +634,10 @@
   min-inline-size: 0;
   margin: 0;
   border: 0;
-  padding: 0.01px 0 0 0;
+  padding-block-start: 0.01px;
+  padding-inline-end: 0;
+  padding-block-end: 0;
+  padding-inline-start: 0;
 }
 body:not( :-moz-handler-blocked ) .oo-ui-fieldsetLayout {
   display: table-cell;
@@ -720,7 +725,9 @@ body:not( :-moz-handler-blocked ) .oo-ui-fieldsetLayout {
   inset-block-end: 0;
 }
 .oo-ui-panelLayout-padded {
-  padding: 12px 16px 16px;
+  padding-block-start: 12px;
+  padding-inline: 16px;
+  padding-block-end: 16px;
 }
 .oo-ui-panelLayout-padded.oo-ui-formLayout > .oo-ui-fieldsetLayout .oo-ui-labelElement-label,
 .oo-ui-panelLayout-padded.oo-ui-formLayout > .oo-ui-fieldsetLayout .oo-ui-iconElement-icon {
@@ -731,7 +738,8 @@ body:not( :-moz-handler-blocked ) .oo-ui-fieldsetLayout {
   border-radius: 2px;
 }
 .oo-ui-panelLayout-padded.oo-ui-panelLayout-framed {
-  margin: 12px 0;
+  margin-block: 12px;
+  margin-inline: 0;
 }
 
 .oo-ui-horizontalLayout > .oo-ui-widget {
@@ -782,8 +790,9 @@ body:not( :-moz-handler-blocked ) .oo-ui-fieldsetLayout {
 }
 
 .oo-ui-decoratedOptionWidget {
-  padding: 6px 12px;
-  line-block-size: 1;
+  padding-block: 6px;
+  padding-inline: 12px;
+  line-height: 1;
 }
 .oo-ui-decoratedOptionWidget.oo-ui-iconElement {
   padding-inline-start: 2.64285714em;
@@ -792,7 +801,7 @@ body:not( :-moz-handler-blocked ) .oo-ui-fieldsetLayout {
   inset-inline-start: 0.78571429em;
 }
 .oo-ui-decoratedOptionWidget .oo-ui-labelElement-label {
-  line-block-size: 1.42857143em;
+  line-height: 1.42857143em;
 }
 .oo-ui-decoratedOptionWidget.oo-ui-indicatorElement {
   padding-inline-end: 2.14285714em;
@@ -823,7 +832,8 @@ body:not( :-moz-handler-blocked ) .oo-ui-fieldsetLayout {
 
 .oo-ui-radioOptionWidget {
   display: table;
-  padding: 4px 0;
+  padding-block: 4px;
+  padding-inline: 0;
 }
 .oo-ui-radioOptionWidget .oo-ui-radioInputWidget,
 .oo-ui-radioOptionWidget.oo-ui-labelElement > .oo-ui-labelElement-label {
@@ -871,7 +881,8 @@ body:not( :-moz-handler-blocked ) .oo-ui-fieldsetLayout {
 }
 .oo-ui-messageWidget.oo-ui-messageWidget-block {
   border: 1px solid;
-  padding: 16px 24px;
+  padding-block: 16px;
+  padding-inline: 24px;
   font-weight: normal;
 }
 .oo-ui-messageWidget.oo-ui-messageWidget-block > .oo-ui-iconElement-icon {
@@ -921,7 +932,7 @@ body:not( :-moz-handler-blocked ) .oo-ui-fieldsetLayout {
   clip: auto;
   margin: 0;
   text-indent: -9999px;
-  line-block-size: 2.5;
+  line-height: 2.5;
   display: inline-block;
   position: static;
   inset-block-start: auto;
@@ -941,7 +952,7 @@ body:not( :-moz-handler-blocked ) .oo-ui-fieldsetLayout {
   clip: auto;
   margin: 0;
   text-indent: -9999px;
-  line-block-size: 2.5;
+  line-height: 2.5;
   display: inline-block;
   position: static;
   inset-block-start: auto;
@@ -982,13 +993,13 @@ body:not( :-moz-handler-blocked ) .oo-ui-fieldsetLayout {
   border-radius: 0;
 }
 .oo-ui-buttonGroupWidget .oo-ui-buttonElement-framed:first-child .oo-ui-buttonElement-button {
-  border-end-start-radius: 2px;
-  border-start-start-radius: 2px;
+  border-undefined-radius: 2px;
+  border-undefined-radius: 2px;
 }
 .oo-ui-buttonGroupWidget .oo-ui-buttonElement-framed:last-child .oo-ui-buttonElement-button {
   margin-inline-end: 0;
-  border-end-end-radius: 2px;
-  border-start-end-radius: 2px;
+  border-undefined-radius: 2px;
+  border-undefined-radius: 2px;
 }
 .oo-ui-buttonGroupWidget .oo-ui-buttonElement-framed.oo-ui-widget-disabled + .oo-ui-widget-disabled > .oo-ui-buttonElement-button {
   border-left-color: #fff;
@@ -1188,8 +1199,11 @@ body:not( :-moz-handler-blocked ) .oo-ui-fieldsetLayout {
 }
 .oo-ui-popupWidget-head > .oo-ui-labelElement-label {
   display: inline-block;
-  margin: 9px 12px 0 2.64285714em;
-  line-block-size: 1.42857143em;
+  margin-block-start: 9px;
+  margin-inline-end: 12px;
+  margin-block-end: 0;
+  margin-inline-start: 2.64285714em;
+  line-height: 1.42857143em;
 }
 .oo-ui-popupWidget-head > .oo-ui-buttonWidget {
   position: absolute;
@@ -1199,13 +1213,15 @@ body:not( :-moz-handler-blocked ) .oo-ui-fieldsetLayout {
   background-size: 1.14285714em 1.14285714em;
 }
 .oo-ui-popupWidget-body {
-  line-block-size: 1.42857143em;
+  line-height: 1.42857143em;
 }
 .oo-ui-popupWidget-body-padded {
-  margin: 5px 12px;
+  margin-block: 5px;
+  margin-inline: 12px;
 }
 .oo-ui-popupWidget-footer {
-  margin: 9px 12px;
+  margin-block: 9px;
+  margin-inline: 12px;
 }
 
 .oo-ui-popupButtonWidget {
@@ -1234,7 +1250,7 @@ body:not( :-moz-handler-blocked ) .oo-ui-fieldsetLayout {
   display: inline-block;
   z-index: 0;
   position: relative;
-  line-block-size: 1.42857143em;
+  line-height: 1.42857143em;
   white-space: nowrap;
 }
 .oo-ui-checkboxInputWidget * {
@@ -1325,7 +1341,8 @@ body:not( :-moz-handler-blocked ) .oo-ui-fieldsetLayout {
 
 .oo-ui-checkboxMultiselectInputWidget .oo-ui-fieldLayout {
   margin-block-start: 0;
-  padding: 4px 0;
+  padding-block: 4px;
+  padding-inline: 0;
 }
 .oo-ui-checkboxMultiselectInputWidget .oo-ui-fieldLayout:first-child {
   padding-block-start: 0;
@@ -1381,7 +1398,8 @@ body:not( :-moz-handler-blocked ) .oo-ui-fieldsetLayout {
   font-size: inherit;
   font-family: inherit;
   block-size: 1.5em;
-  padding: 5px 12px;
+  padding-block: 5px;
+  padding-inline: 12px;
 }
 .oo-ui-dropdownInputWidget.oo-ui-widget-enabled {
   background-color: #f8f9fa;
@@ -1419,7 +1437,7 @@ body:not( :-moz-handler-blocked ) .oo-ui-fieldsetLayout {
   display: inline-block;
   z-index: 0;
   position: relative;
-  line-block-size: 1.42857143em;
+  line-height: 1.42857143em;
   white-space: nowrap;
 }
 .oo-ui-radioInputWidget * {
@@ -1502,7 +1520,8 @@ body:not( :-moz-handler-blocked ) .oo-ui-fieldsetLayout {
 
 .oo-ui-radioSelectInputWidget .oo-ui-fieldLayout {
   margin-block-start: 0;
-  padding: 4px 0;
+  padding-block: 4px;
+  padding-inline: 0;
 }
 .oo-ui-radioSelectInputWidget .oo-ui-fieldLayout:first-child {
   padding-block-start: 0;
@@ -1587,10 +1606,11 @@ body:not( :-moz-handler-blocked ) .oo-ui-fieldsetLayout {
   margin: 0;
   border: 1px solid #a2a9b1;
   border-radius: 2px;
-  padding: 5px 8px;
+  padding-block: 5px;
+  padding-inline: 8px;
   font-size: inherit;
   font-family: inherit;
-  line-block-size: 1.42857143em;
+  line-height: 1.42857143em;
 }
 .oo-ui-textInputWidget input {
   block-size: 2.28571429em;
@@ -1609,8 +1629,11 @@ body:not( :-moz-handler-blocked ) .oo-ui-fieldsetLayout {
 }
 .oo-ui-textInputWidget > .oo-ui-labelElement-label {
   color: #72777d;
-  padding: 0 12px 0 8px;
-  line-block-size: 2.28571429em;
+  padding-block-start: 0;
+  padding-inline-end: 12px;
+  padding-block-end: 0;
+  padding-inline-start: 8px;
+  line-height: 2.28571429em;
 }
 .oo-ui-textInputWidget.oo-ui-indicatorElement .oo-ui-inputWidget-input {
   padding-inline-end: 28px;
@@ -1761,7 +1784,9 @@ body:not( :-moz-handler-blocked ) .oo-ui-fieldsetLayout {
 
 .oo-ui-menuSectionOptionWidget {
   color: #72777d;
-  padding: 5px 12px 4px;
+  padding-block-start: 5px;
+  padding-inline: 12px;
+  padding-block-end: 4px;
   font-weight: bold;
 }
 .oo-ui-menuSectionOptionWidget.oo-ui-widget-enabled {
@@ -1813,8 +1838,11 @@ body:not( :-moz-handler-blocked ) .oo-ui-fieldsetLayout {
   min-block-size: 32px;
   border: 1px solid #a2a9b1;
   border-radius: 2px;
-  padding: 5px 2.14285714em 5px 12px;
-  line-block-size: 1;
+  padding-block-start: 5px;
+  padding-inline-end: 2.14285714em;
+  padding-block-end: 5px;
+  padding-inline-start: 12px;
+  line-height: 1;
 }
 .oo-ui-dropdownWidget-handle .oo-ui-iconElement-icon {
   inset-inline-start: 12px;
@@ -1823,7 +1851,7 @@ body:not( :-moz-handler-blocked ) .oo-ui-fieldsetLayout {
   inset-inline-end: 11px;
 }
 .oo-ui-dropdownWidget-handle .oo-ui-labelElement-label {
-  line-block-size: 1.42857143em;
+  line-height: 1.42857143em;
 }
 .oo-ui-dropdownWidget.oo-ui-iconElement .oo-ui-dropdownWidget-handle {
   padding-inline-start: 2.71428571em;
@@ -1922,14 +1950,14 @@ body:not( :-moz-handler-blocked ) .oo-ui-fieldsetLayout {
 }
 .oo-ui-comboBoxInputWidget .oo-ui-inputWidget-input {
   block-size: 2.28571429em;
-  border-start-end-radius: 0;
-  border-end-end-radius: 0;
+  border-undefined-radius: 0;
+  border-undefined-radius: 0;
   border-right-inline-size: 0;
 }
 .oo-ui-comboBoxInputWidget.oo-ui-comboBoxInputWidget-empty .oo-ui-inputWidget-input,
 .oo-ui-comboBoxInputWidget-php .oo-ui-inputWidget-input {
-  border-start-end-radius: 2px;
-  border-end-end-radius: 2px;
+  border-undefined-radius: 2px;
+  border-undefined-radius: 2px;
   border-right-inline-size: 1px;
 }
 .oo-ui-comboBoxInputWidget-dropdownButton.oo-ui-indicatorElement {
@@ -1944,8 +1972,8 @@ body:not( :-moz-handler-blocked ) .oo-ui-fieldsetLayout {
 }
 .oo-ui-comboBoxInputWidget-dropdownButton.oo-ui-indicatorElement .oo-ui-buttonElement-button,
 .oo-ui-comboBoxInputWidget-dropdownButton.oo-ui-indicatorElement .oo-ui-buttonElement-button:focus {
-  border-start-start-radius: 0;
-  border-end-start-radius: 0;
+  border-undefined-radius: 0;
+  border-undefined-radius: 0;
 }
 .oo-ui-comboBoxInputWidget-php .oo-ui-indicatorWidget {
   inset-inline-end: 12px;
@@ -1985,7 +2013,8 @@ body:not( :-moz-handler-blocked ) .oo-ui-fieldsetLayout {
 
 .oo-ui-checkboxMultioptionWidget {
   display: table;
-  padding: 4px 0;
+  padding-block: 4px;
+  padding-inline: 0;
 }
 .oo-ui-checkboxMultioptionWidget .oo-ui-checkboxInputWidget,
 .oo-ui-checkboxMultioptionWidget.oo-ui-labelElement > .oo-ui-labelElement-label {
@@ -2075,13 +2104,13 @@ body:not( :-moz-handler-blocked ) .oo-ui-fieldsetLayout {
   border-radius: 0;
 }
 .oo-ui-numberInputWidget-minusButton > .oo-ui-buttonElement-button {
-  border-start-end-radius: 0;
-  border-end-end-radius: 0;
+  border-undefined-radius: 0;
+  border-undefined-radius: 0;
   border-right-inline-size: 0;
 }
 .oo-ui-numberInputWidget-plusButton > .oo-ui-buttonElement-button {
-  border-start-start-radius: 0;
-  border-end-start-radius: 0;
+  border-undefined-radius: 0;
+  border-undefined-radius: 0;
   border-left-inline-size: 0;
 }
 .oo-ui-numberInputWidget.oo-ui-widget-disabled.oo-ui-numberInputWidget-buttoned .oo-ui-iconElement-icon {

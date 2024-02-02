@@ -70,7 +70,7 @@
 	padding: 0.5em;
 	color: #fff;
 	text-shadow: 1px 1px #000;
-	line-block-size: 1.125em;
+	line-height: 1.125em;
 	background-color: rgba( 0, 0, 0, 0.5 );
 	text-overflow: ellipsis;
 	text-align: left;

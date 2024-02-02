@@ -24,10 +24,16 @@ padding-inline-start: 3em;
 padding-inline-start: 2.85714286em;
 }
 .oo-ui-tool.oo-ui-tool-with-label .oo-ui-tool-link {
-padding: 11px 12px 11px 12px;
+padding-block-start: 11px;
+padding-inline-end: 12px;
+padding-block-end: 11px;
+padding-inline-start: 12px;
 }
 .oo-ui-tool.oo-ui-tool-with-icon.oo-ui-tool-with-label .oo-ui-tool-link {
-padding: 11px 12px 11px 2.64285714em;
+padding-block-start: 11px;
+padding-inline-end: 12px;
+padding-block-end: 11px;
+padding-inline-start: 2.64285714em;
 }
 .oo-ui-tool .oo-ui-iconElement-icon {
 display: block;
@@ -37,7 +43,7 @@ inset-inline-start: 0.78571429em;
 inset-inline-start: 0.71428571em;
 }
 .oo-ui-tool .oo-ui-tool-title {
-line-block-size: 1.42857143em;
+line-height: 1.42857143em;
 }
 .oo-ui-tool.oo-ui-widget-enabled .oo-ui-tool-link {
 transition: background-color 100ms;
@@ -311,10 +317,11 @@ padding-inline-start: 3em;
 padding-inline-start: 2.85714286em;
 }
 .oo-ui-popupToolGroup.oo-ui-labelElement .oo-ui-popupToolGroup-handle {
-padding: 11px 12px;
+padding-block: 11px;
+padding-inline: 12px;
 }
 .oo-ui-popupToolGroup.oo-ui-labelElement .oo-ui-popupToolGroup-handle .oo-ui-labelElement-label {
-line-block-size: 1.42857143em;
+line-height: 1.42857143em;
 }
 .oo-ui-toolbar-narrow .oo-ui-popupToolGroup.oo-ui-labelElement .oo-ui-popupToolGroup-handle {
 padding-inline-start: 0.71428571em;
@@ -343,22 +350,26 @@ opacity: 1;
 }
 .oo-ui-popupToolGroup-header {
 color: #72777d;
-padding: 0 12px;
+padding-block: 0;
+padding-inline: 12px;
 font-weight: bold;
-line-block-size: 2.28571429em;
+line-height: 2.28571429em;
 }
 .oo-ui-toolbar-narrow .oo-ui-popupToolGroup-header {
-padding: 0 0.71428571em;
+padding-block: 0;
+padding-inline: 0.71428571em;
 }
 .oo-ui-popupToolGroup-tools {
 background-color: #fff;
 min-inline-size: 16em;
-margin: 0 -1px;
+margin-block: 0;
+margin-inline: -1px;
 border: 1px solid #c8ccd1;
 box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
 }
 .oo-ui-popupToolGroup-tools .oo-ui-tool-link {
-padding: 11px 12px;
+padding-block: 11px;
+padding-inline: 12px;
 }
 .oo-ui-toolbar-narrow .oo-ui-popupToolGroup-tools .oo-ui-tool-link {
 padding-inline-start: 0.71428571em;
@@ -366,7 +377,7 @@ padding-inline-end: 0.71428571em;
 }
 .oo-ui-popupToolGroup-tools .oo-ui-tool-link .oo-ui-tool-accel {
 color: #72777d;
-line-block-size: 1.42857143em;
+line-height: 1.42857143em;
 }
 .oo-ui-popupToolGroup-tools .oo-ui-tool-link .oo-ui-tool-accel:not( :empty ) {
 padding-inline-start: 1.28571429em;
@@ -589,7 +600,7 @@ color: #72777d;
 clear: both;
 }
 .oo-ui-toolbar-bar {
-line-block-size: 1;
+line-height: 1;
 position: relative;
 }
 .oo-ui-toolbar-tools,

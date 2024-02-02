@@ -28,7 +28,8 @@
 
 		td,
 		th {
-			padding: 4px 10px;
+			padding-block: 4px;
+			padding-inline: 10px;
 		}
 
 		td {
@@ -53,7 +54,8 @@
 	}
 
 	li {
-		padding: 4px 0;
+		padding-block: 4px;
+		padding-inline: 0;
 		inline-size: 100%;
 	}
 }
@@ -65,7 +67,8 @@
 
 .mw-debug-bit {
 	display: inline-block;
-	padding: 10px 5px;
+	padding-block: 10px;
+	padding-inline: 5px;
 	/* TODO: Re-evaluate whether we should keep this over-ride or switch to ems */
 	/* stylelint-disable-next-line declaration-property-unit-disallowed-list */
 	font-size: 13px;
@@ -115,7 +118,9 @@ a.mw-debug-panelabel:visited {
 #mw-debug-pane-request {
 	table {
 		inline-size: 100%;
-		margin: 10px 0 30px;
+		margin-block-start: 10px;
+		margin-inline: 0;
+		margin-block-end: 30px;
 	}
 
 	tr,
@@ -132,7 +137,8 @@ a.mw-debug-panelabel:visited {
 		/* TODO: Re-evaluate whether we should keep this over-ride or switch to ems */
 		/* stylelint-disable-next-line declaration-property-unit-disallowed-list */
 		font-size: 12px;
-		padding: 8px 10px;
+		padding-block: 8px;
+		padding-inline: 10px;
 	}
 
 	th {
@@ -157,7 +163,8 @@ a.mw-debug-panelabel:visited {
 }
 
 .mw-debug-backtrace {
-	padding: 5px 10px;
+	padding-block: 5px;
+	padding-inline: 10px;
 	margin: 5px;
 	background-color: #dedede;
 
@@ -178,7 +185,7 @@ a.mw-debug-panelabel:visited {
 		/* stylelint-disable-next-line declaration-property-unit-disallowed-list */
 		font-size: 10px;
 		margin-block-end: 0;
-		line-block-size: 1em;
+		line-height: 1em;
 	}
 }
 

@@ -116,7 +116,7 @@
 .oo-ui-messageDialog-title,
 .oo-ui-messageDialog-message {
   display: block;
-  line-block-size: 1.5em;
+  line-height: 1.5em;
   text-align: center;
 }
 .oo-ui-messageDialog-title {
@@ -140,7 +140,7 @@
   padding-block-end: 0;
 }
 .oo-ui-messageDialog-actions .oo-ui-actionWidget.oo-ui-labelElement .oo-ui-labelElement-label {
-  line-block-size: 2.5em;
+  line-height: 2.5em;
   text-align: center;
 }
 .oo-ui-messageDialog-actions .oo-ui-actionWidget.oo-ui-flaggedElement-progressive .oo-ui-labelElement-label {
@@ -180,7 +180,9 @@
   border-radius: 0 0 3px 3px;
 }
 .oo-ui-messageDialog-actions-vertical .oo-ui-actionWidget {
-  margin: -1px 0 0;
+  margin-block-start: -1px;
+  margin-inline: 0;
+  margin-block-end: 0;
   border-block-end: 1px solid #e5e5e5;
 }
 .oo-ui-messageDialog-actions-vertical .oo-ui-actionWidget:first-child {
@@ -245,14 +247,15 @@
   block-size: 3.4em;
 }
 .oo-ui-processDialog-location {
-  padding: 0.75em 0;
+  padding-block: 0.75em;
+  padding-inline: 0;
   block-size: 1.875em;
   cursor: default;
   text-align: center;
 }
 .oo-ui-processDialog-title {
   font-weight: bold;
-  line-block-size: 1.875em;
+  line-height: 1.875em;
 }
 .oo-ui-processDialog-actions-safe .oo-ui-actionWidget .oo-ui-buttonElement-button,
 .oo-ui-processDialog-actions-primary .oo-ui-actionWidget .oo-ui-buttonElement-button,
@@ -263,7 +266,7 @@
 .oo-ui-processDialog-actions-safe .oo-ui-actionWidget .oo-ui-labelElement-label,
 .oo-ui-processDialog-actions-primary .oo-ui-actionWidget .oo-ui-labelElement-label,
 .oo-ui-processDialog-actions-other .oo-ui-actionWidget .oo-ui-labelElement-label {
-  line-block-size: 1.875em;
+  line-height: 1.875em;
 }
 .oo-ui-processDialog-actions-safe .oo-ui-actionWidget.oo-ui-buttonElement-framed,
 .oo-ui-processDialog-actions-primary .oo-ui-actionWidget.oo-ui-buttonElement-framed,
@@ -273,7 +276,8 @@
 .oo-ui-processDialog-actions-safe .oo-ui-actionWidget.oo-ui-buttonElement-framed .oo-ui-buttonElement-button,
 .oo-ui-processDialog-actions-primary .oo-ui-actionWidget.oo-ui-buttonElement-framed .oo-ui-buttonElement-button,
 .oo-ui-processDialog-actions-other .oo-ui-actionWidget.oo-ui-buttonElement-framed .oo-ui-buttonElement-button {
-  padding: 0 1em;
+  padding-block: 0;
+  padding-inline: 1em;
   vertical-align: middle;
   margin: -1px;
 }
@@ -285,7 +289,8 @@
 .oo-ui-processDialog-actions-safe .oo-ui-actionWidget.oo-ui-buttonElement-frameless .oo-ui-buttonElement-button,
 .oo-ui-processDialog-actions-primary .oo-ui-actionWidget.oo-ui-buttonElement-frameless .oo-ui-buttonElement-button,
 .oo-ui-processDialog-actions-other .oo-ui-actionWidget.oo-ui-buttonElement-frameless .oo-ui-buttonElement-button {
-  padding: 0.75em 1em;
+  padding-block: 0.75em;
+  padding-inline: 1em;
   vertical-align: middle;
 }
 .oo-ui-processDialog-actions-safe .oo-ui-actionWidget:hover,
@@ -324,7 +329,10 @@
 }
 .oo-ui-processDialog-errors {
   background-color: rgba(255, 255, 255, 0.9);
-  padding: 3em 3em 0 3em;
+  padding-block-start: 3em;
+  padding-inline-end: 3em;
+  padding-block-end: 0;
+  padding-inline-start: 3em;
 }
 .oo-ui-processDialog-errors-title {
   font-size: 1.5em;
@@ -333,13 +341,16 @@
   text-align: center;
 }
 .oo-ui-processDialog-errors > .oo-ui-messageWidget {
-  margin: 1em 0 0;
+  margin-block-start: 1em;
+  margin-inline: 0;
+  margin-block-end: 0;
 }
 .oo-ui-processDialog-errors-actions {
   text-align: center;
 }
 .oo-ui-processDialog-errors-actions > .oo-ui-buttonWidget {
-  margin: 2em 1em;
+  margin-block: 2em;
+  margin-inline: 1em;
 }
 .oo-ui-processDialog.oo-ui-isMobile .oo-ui-processDialog-location {
   text-align: left;

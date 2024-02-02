@@ -17,7 +17,7 @@
 
 .mw-widget-calendarWidget-header {
 	position: relative;
-	line-block-size: 2.5;
+	line-height: 2.5;
 
 	// Overwrite OOUI's `.oo-ui-buttonElement-frameless.oo-ui-iconElement:first-child`
 	.oo-ui-buttonWidget.oo-ui-iconElement {
@@ -26,7 +26,8 @@
 	}
 
 	.mw-widget-calendarWidget-labelButton {
-		margin: 0 auto;
+		margin-block: 0;
+		margin-inline: auto;
 		display: block;
 		inline-size: @calendarWidth - 2 * 3em;
 
@@ -167,7 +168,7 @@
 .mw-widget-calendarWidget-day-heading {
 	// 7x7 grid
 	inline-size: @calendarWidth / 7;
-	line-block-size: @calendarHeight / 7;
+	line-height: @calendarHeight / 7;
 
 	// Don't overlap the hacked-up fake box-shadow border we get when focussed
 	&:nth-child( 7n ) {
@@ -181,7 +182,7 @@
 	}
 
 	&:nth-child( 42 ) ~ & {
-		line-block-size: @calendarHeight / 7 - 0.2em;
+		line-height: @calendarHeight / 7 - 0.2em;
 		margin-block-end: 0.2em;
 	}
 }
@@ -189,7 +190,7 @@
 .mw-widget-calendarWidget-month {
 	// 2x6 grid
 	inline-size: @calendarWidth / 2;
-	line-block-size: @calendarHeight / 6;
+	line-height: @calendarHeight / 6;
 
 	// Don't overlap the hacked-up fake box-shadow border we get when focussed
 	&:nth-child( 2n ) {
@@ -203,7 +204,7 @@
 	}
 
 	&:nth-child( 10 ) ~ & {
-		line-block-size: @calendarHeight / 6 - 0.2em;
+		line-height: @calendarHeight / 6 - 0.2em;
 		margin-block-end: 0.2em;
 	}
 }
@@ -211,7 +212,7 @@
 .mw-widget-calendarWidget-year {
 	// 5x4 grid
 	inline-size: @calendarWidth / 5;
-	line-block-size: @calendarHeight / 4;
+	line-height: @calendarHeight / 4;
 
 	// Don't overlap the hacked-up fake box-shadow border we get when focussed
 	&:nth-child( 5n ) {
@@ -225,7 +226,7 @@
 	}
 
 	&:nth-child( 15 ) ~ & {
-		line-block-size: @calendarHeight / 4 - 0.2em;
+		line-height: @calendarHeight / 4 - 0.2em;
 		margin-block-end: 0.2em;
 	}
 }
