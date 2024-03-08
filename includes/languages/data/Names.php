@@ -172,6 +172,8 @@ class Names {
 		'frr' => 'Nordfriisk', # North Frisian
 		'fur' => 'furlan', # Friulian
 		'fy' => 'Frysk', # Frisian
+		'fzh' => '偽中国語',
+		'fzh-kr' => '僞中國語 (韓國)',
 		'ga' => 'Gaeilge', # Irish
 		'gaa' => 'Ga', # Ga
 		'gag' => 'Gagauz', # Gagauz
